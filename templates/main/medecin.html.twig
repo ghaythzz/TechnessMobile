@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+
+    <body>
+<!-- Start Doctor Details Area -->
+		<div class="doctor-details-area ptb-100">
+			<div class="container">
+				<div class="doctor-details-content">
+					<div style=" padding-top: 35px;margin-left: 1070px">
+						<a class="default-btn active" href="{{path('modifierProfile',{'id':app.user.id})}}">Edit profile</a>
+					</div>
+					<div class="doctor-details-wrap">
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="doctor-img">
+									<img src="{{ asset('/uploads/'~app.user.image) }}" alt="Image">
+								</div>
+
+
+							</div>
+							<div class="col-lg-6">
+								<div class="doctor-content">
+									<h3>{{ app.user.nom  }}-{{ app.user.prenom }}
+										{% if app.user.status %}
+											<img src="{{ asset('/uploads/status.png') }}">
+										{% endif  %}
+									</h3>
+
+									<ul>
+										<li>
+
+											<h3>
+												{{ app.user.speciality }}
+											</h3>
+										</li>
+										<li>
+											<span>Email:</span>
+											{{ app.user.Email }}
+										</li>
+										<li>
+											<span>Address:</span>
+											{{ app.user.adresse }}
+										</li>
+										<li>
+											<span>Phone:</span>
+											{{ app.user.numero }}
+										</li>
+										<li>
+											Patient Experience Rating
+											<p>
+												
+												{% if app.user.rates >= 1 %}
+												<i class="ri-star-s-fill"></i>
+												{%endif%}
+												{% if app.user.rates  >= 2 %}
+												<i class="ri-star-s-fill"></i>
+												{%endif%}
+												{% if app.user.rates >= 3 %}
+												<i class="ri-star-s-fill"></i>
+												{%endif%}
+												{% if app.user.rates >= 4 %}
+												<i class="ri-star-s-fill"></i>
+												{%endif%}
+												{% if app.user.rates ==5 %}
+												<i class="ri-star-s-fill"></i>
+                                                   {%endif%}
+
+												{{ app.user.rates }} Stars
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="pt-100">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="doctor-informetion mr-15">
+								<h2>Biography</h2>
+								<p>{{ app.user.bioDescription }}</p>
+
+								<div class="gap-mb-50"></div>
+
+								<h2>Education</h2>
+								<ul class="education">
+									<li>
+										University of Washington School of Medicine
+										<span>New York, NY USA (2013)</span>
+									</li>
+									<li>
+										Behavioral Medicine and Neuropsychology Internship
+										<span>University of Washington (2010)</span>
+									</li>
+									<li>
+										Mayo School of Graduate Medical Education
+										<span>University of Washington (2009)</span>
+									</li>
+								</ul>
+
+								<div class="gap-mb-50"></div>
+
+								<h2>Employment</h2>
+								<ul class="education">
+									<li>
+										Director of the Head Trauma Rehabilitation Department, Bexi Medical Center
+										<span>2019 – 2021</span>
+									</li>
+									<li>
+										Resident,  Physical Medicine and Rehabilitation, Bexi Hospital
+										<span>2018 – 2019</span>
+									</li>
+									<li>
+										Specialist of Physical Medicine and Rehabilitation
+										<span>2014 – 2018</span>
+									</li>
+								</ul>
+
+								<div class="gap-mb-50"></div>
+
+								<h2>Memberships</h2>
+								<ul class="memberships">
+									<li>
+										Member, International Association for the Study of Pain
+									</li>
+									<li>
+										Member, Society for Affective Science
+									</li>
+									<li>
+										International Society of Physical and Rehabilitation
+									</li>
+									<li>
+										Division of General Internal Medicine
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="sidebar-wrap ml-15">
+								<div class="sidebar-widget appointment-time">
+									<h3>Appointment Time</h3>
+
+									<ul>
+										<li>
+											Monday
+											<span>3:00 am - 5:00 pm</span>
+										</li>
+										<li>
+											Tueday
+											<span>3:00 am - 5:00 pm</span>
+										</li>
+										<li>
+											Wedday
+											<span>3:00 am - 8:00 pm</span>
+										</li>
+										<li>
+											Thuday
+											<span>3:00 am - 8:00 pm</span>
+										</li>
+										<li>
+											Friday
+											<span>3:00 am - 6:00 pm</span>
+										</li>
+										<li>
+											Saturday
+											<span>Closed</span>
+										</li>
+										<li>
+											<a href="appointment.html" class="default-btn active">
+												Book an appointment
+											</a>
+										</li>
+									</ul>
+								</div>
+
+								<div class="sidebar-widget review">
+									<h3>Write A Review</h3>
+
+									<div class="review-wrap">
+										<div class="doctor-info d-flex align-items-center">
+											<img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/team/team-14.jpg" alt="Image">
+											<div class="info ms-3">
+												<h4>Glenn Arredondo</h4>
+												<span>Family Physicians</span>
+											</div>
+										</div>
+
+										<form>
+											<p>
+												<i class="ri-star-fill"></i>
+												<i class="ri-star-fill"></i>
+												<i class="ri-star-fill"></i>
+												<i class="ri-star-fill"></i>
+												<i class="ri-star-fill"></i>
+												Overall provider rating
+											</p>
+
+											<div class="form-group">
+												<textarea class="form-control text" cols="30" rows="6" placeholder="How was your visit with a doctor?"></textarea>
+											</div>
+
+											<div class="form-group">
+												<input type="text" class="form-control" placeholder="Email address">
+											</div>
+
+											<div class="form-group mb-0">
+												<button type="submit" class="default-btn active">
+													Submit review
+												</button>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Doctor Details Area -->
+		<!-- Start Dark Mode Area -->
+		<div class="dark-mode-btn">
+			<div class="container">
+				<div class="dark-version">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- End Dark Mode Area -->
+
+
+
+
+    </body>
+
+{% endblock %}

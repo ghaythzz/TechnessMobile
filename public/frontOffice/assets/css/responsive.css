@@ -1,0 +1,2170 @@
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+  .ptb-100 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .pt-100 {
+    padding-top: 60px;
+  }
+  .pb-100 {
+    padding-bottom: 60px;
+  }
+  .pb-70 {
+    padding-bottom: 30px;
+  }
+  .pl-15 {
+    padding-left: 0;
+  }
+  .pr-15 {
+    padding-right: 0;
+  }
+  .pb-150 {
+    padding-bottom: 60px;
+  }
+  .ml-15 {
+    margin-left: 0;
+  }
+  .mr-15 {
+    margin-right: 0;
+  }
+  .default-btn {
+    font-size: 14px;
+    padding: 9px 15px;
+  }
+  .read-more {
+    font-size: 14px;
+  }
+  .form-control {
+    height: 50px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .mr-44 {
+    margin-right: 0;
+  }
+  .ml-44 {
+    margin-left: 0;
+  }
+  h2 {
+    line-height: 35px !important;
+  }
+  .ml-86 {
+    margin-left: 0;
+  }
+  .mr-86 {
+    margin-right: 0;
+  }
+  /* Header Style */
+  .header-left-content {
+    text-align: center;
+  }
+  .header-left-content li {
+    padding-right: 0;
+    margin-right: 5px;
+    border-right: none;
+    font-size: 13px;
+  }
+  .header-right-content {
+    text-align: center;
+  }
+  .header-right-content li {
+    font-size: 13px;
+  }
+  .header-right-content li .form-select {
+    font-size: 13px;
+  }
+  /* Hero Style */
+  .hero-area {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero-area .pagination-btn {
+    -webkit-transform: unset;
+            transform: unset;
+    position: unset;
+  }
+  .hero-area .pagination-btn::before {
+    display: none;
+  }
+  .hero-area .pagination-btn::after {
+    display: none;
+  }
+  .hero-area .socila-link {
+    display: none;
+  }
+  .swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    font-size: 18px;
+  }
+  .swiper-slide {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.8;
+  }
+  .hero-content {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .hero-content p {
+    margin-bottom: 25px;
+  }
+  /* Futcher Style */
+  .single-futcher {
+    text-align: center;
+  }
+  .single-futcher .icon-one {
+    display: block !important;
+  }
+  .single-futcher h3 {
+    font-size: 20px;
+  }
+  .single-futcher h3.play {
+    max-width: 100%;
+  }
+  .single-futcher .opacity0 {
+    display: none;
+  }
+  .single-futcher .opacity1 {
+    opacity: 1 !important;
+  }
+  .single-futcher::before {
+    display: none;
+  }
+  /* Who We Are Style */
+  .who-we-are-img-2 h3 {
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+  .who-we-are-content .top-title {
+    font-size: 14px;
+  }
+  .who-we-are-content h2 {
+    font-size: 25px;
+  }
+  .who-we-are-content p {
+    margin-bottom: 30px;
+  }
+  .single-who-we-are {
+    border: 1px solid #dddddd;
+    padding: 20px;
+  }
+  .single-who-we-are i {
+    margin-bottom: 10px;
+  }
+  .single-who-we-are h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .who-we-are-img-2 img {
+    width: 100%;
+  }
+  /* Section Title Style */
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .section-title .top-title {
+    font-size: 14px;
+  }
+  .section-title h2 {
+    font-size: 25px;
+  }
+  /* Department Style */
+  .single-our-department .department-content {
+    padding: 20px;
+  }
+  .single-our-department .department-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .single-our-department::after {
+    display: none;
+  }
+  .single-our-department::before {
+    display: none;
+  }
+  .single-our-department .department-content.one {
+    display: none;
+  }
+  .single-our-department .department-content.hover {
+    opacity: 1;
+    position: unset;
+  }
+  .single-our-department .department-content.hover .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover .icon i {
+    left: 0;
+    top: 0;
+  }
+  .single-our-department .department-content.hover .icon::before {
+    display: none;
+  }
+  .single-our-department .department-content.hover h3 {
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  /* Choose Style */
+  .choose-us-area {
+    background-image: unset;
+  }
+  .choose-us-content .top-title {
+    font-size: 14px;
+  }
+  .choose-us-content h2 {
+    font-size: 25px;
+  }
+  .choose-us-content p {
+    margin-bottom: 30px;
+  }
+  .choose-us-content ul li {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  .choose-us-content ul li span {
+    position: unset;
+    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+  }
+  .choose-us-content ul li span::before {
+    display: none;
+  }
+  .choose-us-content ul li h3 {
+    font-size: 20px;
+  }
+  .choose-us-img {
+    margin-top: 30px;
+  }
+  .choose-us-img .ambulance-services {
+    left: 0;
+    bottom: 0;
+    border: 1px solid #dddddd;
+    padding: 20px;
+  }
+  .choose-us-img .ambulance-services .ambulance-info a {
+    font-size: 25px;
+  }
+  /* Team Style */
+  .single-team {
+    text-align: center;
+  }
+  .single-team h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  /* Urgent Style */
+  .single-urgent {
+    padding: 20px;
+  }
+  .single-urgent h3 {
+    font-size: 20px;
+  }
+  /* Appointment Style */
+  .appointment-img {
+    height: 400px;
+  }
+  .appointment-img h3 {
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .appointment-form {
+    padding: 20px;
+  }
+  .appointment-form h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .appointment-form .form-group {
+    margin-bottom: 20px;
+  }
+  .appointment-form .form-group label {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control.form-select {
+    font-size: 13px;
+  }
+  /* Solution Style */
+  .single-solution {
+    padding: 20px;
+    border: 1px solid #dddddd;
+  }
+  .single-solution h3 {
+    font-size: 20px;
+  }
+  /* Client Style */
+  .ml100 {
+    margin-left: 0;
+  }
+  .single-client {
+    padding: 20px;
+  }
+  .single-client .quat {
+    display: none !important;
+  }
+  .single-client .client-info {
+    margin-bottom: 10px;
+  }
+  .single-client .client-info h3 {
+    font-size: 20px;
+  }
+  /* Blog Style */
+  .single-blog .blog-content .tag {
+    font-size: 14px;
+  }
+  .single-blog .blog-content ul {
+    margin-bottom: 10px;
+  }
+  .single-blog .blog-content ul li {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .single-blog .blog-content h3 {
+    font-size: 20px;
+  }
+  /* Knock Style */
+  .knock-us-content {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-left: 0;
+  }
+  .knock-us-content h3 {
+    font-size: 25px;
+  }
+  .knock-us-btn {
+    text-align: center;
+    padding-right: 0;
+  }
+  /* Footer Style */
+  .single-footer-widget h4 {
+    font-size: 16px;
+  }
+  .single-footer-widget h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .single-footer-widget .import-link li {
+    margin-bottom: 10px;
+  }
+  .single-footer-widget .socila-link li a {
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+  }
+  /* Page Banner Style */
+  .page-banner-content {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    display: block;
+  }
+  .page-banner-content h2 {
+    font-size: 35px;
+  }
+  .page-banner-content ul li {
+    font-size: 14px;
+  }
+  /* Our Mison Style */
+  .our-mison-area .pe-0 {
+    padding-right: 12px !important;
+  }
+  .our-mison-area .ps-0 {
+    padding-left: 12px !important;
+  }
+  .single-mison {
+    padding: 20px;
+  }
+  .single-mison h3 {
+    font-size: 20px;
+  }
+  /* Pagination Style */
+  .pagination-area {
+    margin-top: 0;
+  }
+  .pagination-area .page-numbers {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  /* Department Style */
+  .department-orthopedics-content h2 {
+    font-size: 25px;
+  }
+  .department-orthopedics-content .gap-mb-30 {
+    margin-bottom: 20px;
+  }
+  .department-orthopedics-content .pain {
+    margin-top: 15px;
+  }
+  .department-orthopedics-content iframe {
+    margin-bottom: 30px;
+    height: 400px;
+  }
+  /* Widget Style */
+  .sidebar-widget h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sidebar-widget ul {
+    padding: 20px;
+  }
+  .sidebar-widget.departments ul li {
+    margin-bottom: 10px;
+  }
+  .sidebar-widget.review .review-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.conditions .accordion {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form .src-btn {
+    top: 33px;
+    right: 35px;
+  }
+  .sidebar-widget.recent-post .recent-post-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.tags ul {
+    padding: 20px;
+  }
+  /* Doctors Style */
+  .find-doctors {
+    padding: 20px;
+  }
+  .find-doctors .form-group {
+    margin-bottom: 20px;
+  }
+  .find-doctors .form-group label {
+    font-weight: 500;
+  }
+  .doctor-details-content::before {
+    display: none;
+  }
+  .doctor-details-content .socila-link {
+    display: none;
+  }
+  .doctor-details-wrap {
+    padding: 20px;
+  }
+  .doctor-details-wrap .doctor-img {
+    margin-bottom: 20px;
+  }
+  .doctor-content h3 {
+    font-size: 22px;
+  }
+  .doctor-content .family {
+    margin-bottom: 20px;
+  }
+  .doctor-content ul li {
+    margin-bottom: 12px;
+  }
+  .doctor-informetion {
+    margin-bottom: 30px;
+  }
+  .doctor-informetion h2 {
+    padding: 20px;
+    font-size: 25px;
+  }
+  .doctor-informetion ul li {
+    margin-bottom: 12px;
+  }
+  .doctor-informetion ul li::after {
+    display: none;
+  }
+  /* Payment Style */
+  .payment-content {
+    margin-bottom: 30px;
+  }
+  .payment-content h2 {
+    font-size: 25px;
+  }
+  .payment-content .gap-mb-40 {
+    margin-bottom: 30px;
+  }
+  .payment-content .online-payment {
+    padding: 20px;
+  }
+  .payment-content .online-payment .form-group {
+    margin-bottom: 20px;
+  }
+  /* Appointments Style */
+  .appointments-conetnt .requestor {
+    padding: 20px;
+  }
+  .appointments-conetnt .requestor h3 {
+    font-size: 20px;
+  }
+  .appointments-conetnt .requestor ul {
+    margin-bottom: 20px;
+  }
+  .appointments-conetnt .requestor ul li span {
+    font-weight: 500;
+  }
+  .appointments-conetnt .requestor .form-group {
+    margin-bottom: 20px;
+  }
+  .appointments-conetnt .requestor .form-group label {
+    font-weight: 500;
+  }
+  /* Appointments Style */
+  .appointments-form {
+    padding: 20px;
+  }
+  .appointments-form h2 {
+    font-size: 25px;
+  }
+  .appointments-form .form-group {
+    margin-bottom: 20px;
+  }
+  /* Hospital Style */
+  .single-hospital .hospital-content {
+    padding: 20px;
+  }
+  .single-hospital .hospital-content h3 {
+    font-size: 22px;
+  }
+  .single-hospital .hospital-content .default-btn {
+    padding: 12px 35px;
+  }
+  .hospital-details-content {
+    margin-bottom: 30px;
+  }
+  .hospital-details-content h2 {
+    font-size: 25px;
+  }
+  .health-information-content {
+    margin-top: 30px;
+  }
+  .health-information-content h2 {
+    font-size: 25px;
+  }
+  .choose-consultation-content h2 {
+    font-size: 25px;
+  }
+  .single-consult-online {
+    padding: 20px;
+  }
+  .single-consult-online h2 {
+    font-size: 25px;
+  }
+  .hospital-src h2 {
+    font-size: 25px;
+  }
+  .patients-visitors-content {
+    margin-bottom: 30px;
+  }
+  .patients-visitors-content h2 {
+    font-size: 25px;
+  }
+  .single-patients {
+    padding: 20px;
+  }
+  .single-patients h3 {
+    font-size: 20px;
+  }
+  .single-patients .default-btn {
+    padding: 12px 30px;
+  }
+  .visitors-sludebar {
+    padding: 20px;
+  }
+  .patient-information-content {
+    margin-bottom: 30px;
+  }
+  .patient-information-content h2 {
+    font-size: 25px;
+  }
+  .single-patient-information {
+    padding: 20px;
+  }
+  .single-patient-information h3 {
+    font-size: 20px;
+  }
+  .login-register-form-area h2 {
+    font-size: 25px;
+  }
+  .login-register-form-area.register {
+    margin-left: 0;
+  }
+  .login-register-form-area.register::before {
+    display: none;
+  }
+  .login-register-form-area.login {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .single-help-card {
+    padding: 20px;
+  }
+  .single-help-card h3 {
+    font-size: 20px;
+  }
+  .frequently-askeds {
+    margin-bottom: 30px;
+  }
+  .frequently-askeds h2 {
+    font-size: 25px;
+  }
+  .visitors-sludebar ul .call {
+    font-size: 20px;
+  }
+  /* Coming Soon Area */
+  .coming-soon-content {
+    padding: 30px 20px;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .coming-soon-content h2 {
+    margin-top: 0;
+    font-size: 25px;
+  }
+  .coming-soon-content #timer {
+    margin-top: 10px;
+  }
+  .coming-soon-content #timer div {
+    width: 95px;
+    height: 100px;
+    font-size: 35px;
+    margin-top: 20px;
+  }
+  .coming-soon-content #timer div span {
+    font-size: 14px;
+  }
+  .coming-soon-content form {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+  .coming-soon-content .newsletter-form .default-btn {
+    height: auto;
+  }
+  .coming-soon-content form .form-group .form-control {
+    border-radius: 0;
+  }
+  .srarch-result {
+    display: block !important;
+  }
+  .srarch-result p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .srarch-result .form-select {
+    max-width: 100%;
+  }
+  .single-product .product-content h3 {
+    font-size: 20px;
+  }
+  /* Cart */
+  .cart-controller {
+    overflow: hidden;
+  }
+  .cart-controller .cart-table {
+    text-align: center;
+  }
+  .cart-controller .cart-table table thead tr th {
+    font-size: 16px;
+  }
+  .cart-controller .cart-table table tbody tr td a {
+    font-size: 14px;
+  }
+  .cart-controller .cart-table table thead tr th {
+    white-space: nowrap;
+  }
+  .cart-controller .cart-table table tbody tr td {
+    white-space: nowrap;
+    padding: 15px;
+  }
+  .coupon-cart .form-group .default-btn {
+    height: 50px;
+    line-height: 17px;
+    position: unset;
+    margin-top: 20px;
+    width: 100%;
+    display: block;
+  }
+  .coupon-cart .default-btn.update-cart {
+    width: 100%;
+    margin-top: 20px;
+    display: block;
+  }
+  .cart-totals {
+    margin-top: 50px;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .cart-totals .cart-totals-wrap {
+    padding: 20px;
+  }
+  .cart-totals h3 {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .checkout-wrap .billing-details {
+    padding: 20px;
+  }
+  .checkout-wrap .billing-details h3 {
+    font-size: 21px;
+  }
+  .checkout-wrap .faq-accordion h3 {
+    font-size: 20px;
+  }
+  .checkout-wrap .faq-accordion {
+    margin-left: 0;
+  }
+  /* Product Details Title */
+  .product-details-image {
+    margin-bottom: 30px;
+  }
+  .product-details-desc h3 {
+    font-size: 21px;
+  }
+  .product-details-desc .price {
+    font-size: 18px;
+  }
+  .product-details-desc .product-add-to-cart.d-flex {
+    display: block !important;
+  }
+  .product-details-desc .product-add-to-cart .default-btn {
+    margin-top: 10px;
+  }
+  .product-details-desc .sku {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .product-details-tab {
+    padding: 20px;
+  }
+  .product-details-tab .nav-tabs .nav-item .nav-link.active::before {
+    display: none;
+  }
+  .product-details-tab .product-details-review-content .product-review-form .review-comments .review-item {
+    padding-right: 0;
+  }
+  /* Blog Details Title */
+  .blog-details-content .tag {
+    font-size: 13px;
+  }
+  .blog-details-content ul li {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .blog-details-content h2 {
+    font-size: 25px;
+  }
+  .blog-details-content blockquote {
+    padding: 20px;
+  }
+  .blog-details-content blockquote img {
+    display: none;
+  }
+  .blog-details-content blockquote p {
+    font-size: 16px;
+  }
+  .blog-details-content .tag-social {
+    display: block !important;
+  }
+  .blog-details-content .tag-social .tags {
+    margin-bottom: 20px;
+  }
+  .blog-details-content .leave-from {
+    margin-bottom: 50px;
+  }
+  .left-informetion {
+    padding-right: 0;
+  }
+  .left-informetion::before {
+    display: none;
+  }
+  .left-informetion h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .right-informetion {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .right-informetion h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  .contact-form .form-group label {
+    font-size: 14px;
+  }
+  .department-orthopedics-content {
+    margin-right: 0;
+  }
+  .find-doctor-title {
+    margin-bottom: 30px;
+  }
+  .find-doctor-title h3 {
+    font-size: 25px;
+  }
+  .find-doctor-title p {
+    font-size: 16px;
+  }
+  .blog-details-content {
+    margin-right: 0;
+  }
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* Who We Are Style */
+  .single-who-we-are {
+    padding: 18px;
+  }
+  /* Department Style */
+  .single-our-department .department-content {
+    padding: 10px;
+  }
+  /* Appointment Style */
+  .appointment-area .container-fluid {
+    max-width: 540px;
+  }
+  .single-futcher h3.play {
+    max-width: 70px;
+    margin: auto;
+  }
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 15px;
+  }
+  .ptb-100 {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .pt-100 {
+    padding-top: 60px;
+  }
+  .pb-100 {
+    padding-bottom: 60px;
+  }
+  .pb-70 {
+    padding-bottom: 30px;
+  }
+  .pl-15 {
+    padding-left: 0;
+  }
+  .pr-15 {
+    padding-right: 0;
+  }
+  .pb-150 {
+    padding-bottom: 60px;
+  }
+  .ml-15 {
+    margin-left: 0;
+  }
+  .mr-15 {
+    margin-right: 0;
+  }
+  .default-btn {
+    font-size: 14px;
+    padding: 9px 15px;
+  }
+  .read-more {
+    font-size: 14px;
+  }
+  .form-control {
+    height: 50px;
+  }
+  p {
+    font-size: 15px;
+  }
+  .mr-44 {
+    margin-right: 0;
+  }
+  .ml-44 {
+    margin-left: 0;
+  }
+  h2 {
+    line-height: 35px !important;
+  }
+  .ml-86 {
+    margin-left: 0;
+  }
+  .mr-86 {
+    margin-right: 0;
+  }
+  /* Header Style */
+  .header-left-content {
+    text-align: center;
+  }
+  .header-left-content li {
+    font-size: 13px;
+  }
+  .header-right-content {
+    text-align: center;
+  }
+  .header-right-content li {
+    font-size: 13px;
+  }
+  .header-right-content li .form-select {
+    font-size: 13px;
+  }
+  /* Hero Style */
+  .hero-area {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero-area .pagination-btn {
+    -webkit-transform: unset;
+            transform: unset;
+    position: unset;
+  }
+  .hero-area .pagination-btn::before {
+    display: none;
+  }
+  .hero-area .pagination-btn::after {
+    display: none;
+  }
+  .hero-area .socila-link {
+    display: none;
+  }
+  .swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    font-size: 18px;
+  }
+  .swiper-slide {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.6;
+  }
+  .hero-content {
+    max-width: 530px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .hero-content h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .hero-content p {
+    margin: auto;
+    margin-bottom: 25px;
+  }
+  /* Futcher Style */
+  .single-futcher {
+    text-align: center;
+  }
+  .single-futcher .icon-one {
+    display: block !important;
+  }
+  .single-futcher h3 {
+    font-size: 20px;
+  }
+  .single-futcher h3.play {
+    max-width: 100%;
+    margin: auto;
+  }
+  .single-futcher .opacity0 {
+    display: none;
+  }
+  .single-futcher .opacity1 {
+    opacity: 1 !important;
+  }
+  .single-futcher::before {
+    display: none;
+  }
+  /* Who We Are Style */
+  .who-we-are-img-2 h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  .who-we-are-content .top-title {
+    font-size: 14px;
+  }
+  .who-we-are-content h2 {
+    font-size: 28px;
+  }
+  .who-we-are-content p {
+    margin-bottom: 30px;
+  }
+  .single-who-we-are {
+    border: 1px solid #dddddd;
+    padding: 20px;
+  }
+  .single-who-we-are i {
+    margin-bottom: 10px;
+  }
+  .single-who-we-are h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .who-we-are-img img {
+    width: 100%;
+  }
+  .who-we-are-img-2 img {
+    width: 100%;
+  }
+  /* Section Title Style */
+  .section-title {
+    margin-bottom: 30px;
+  }
+  .section-title .top-title {
+    font-size: 14px;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  /* Department Style */
+  .single-our-department .department-content {
+    padding: 20px;
+  }
+  .single-our-department .department-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content .icon {
+    display: none;
+  }
+  /* Choose Style */
+  .choose-us-area {
+    background-image: unset;
+  }
+  .choose-us-content .top-title {
+    font-size: 14px;
+  }
+  .choose-us-content h2 {
+    font-size: 28px;
+  }
+  .choose-us-content p {
+    margin-bottom: 30px;
+  }
+  .choose-us-content ul li h3 {
+    font-size: 20px;
+  }
+  .choose-us-img {
+    margin-top: 30px;
+  }
+  .choose-us-img .ambulance-services {
+    left: 0;
+    bottom: 0;
+    border: 1px solid #dddddd;
+  }
+  /* Team Style */
+  .single-team {
+    text-align: center;
+  }
+  .single-team h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  /* Urgent Style */
+  .single-urgent {
+    padding: 20px;
+  }
+  .single-urgent h3 {
+    font-size: 20px;
+  }
+  /* Appointment Style */
+  .appointment-area .container-fluid {
+    max-width: 720px;
+  }
+  .appointment-img {
+    height: 400px;
+  }
+  .appointment-img h3 {
+    font-size: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .appointment-form {
+    padding: 20px;
+  }
+  .appointment-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .appointment-form .form-group {
+    margin-bottom: 20px;
+  }
+  .appointment-form .form-group label {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::-webkit-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control:-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::-ms-input-placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control::placeholder {
+    font-size: 13px;
+  }
+  .appointment-form .form-group .form-control.form-select {
+    font-size: 13px;
+  }
+  /* Solution Style */
+  .single-solution {
+    padding: 20px;
+    border: 1px solid #dddddd;
+  }
+  .single-solution h3 {
+    font-size: 20px;
+  }
+  /* Client Style */
+  .client-area .section-title.left-title {
+    max-width: 100%;
+  }
+  .client-area {
+    z-index: 1;
+  }
+  .client-area .section-title.left-title {
+    text-align: center;
+  }
+  .ml100 {
+    margin-left: 0;
+  }
+  .single-client {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .single-client .client-info {
+    margin-bottom: 10px;
+  }
+  .single-client .client-info h3 {
+    font-size: 20px;
+  }
+  /* Blog Style */
+  .single-blog .blog-content .tag {
+    font-size: 14px;
+  }
+  .single-blog .blog-content ul {
+    margin-bottom: 10px;
+  }
+  .single-blog .blog-content ul li {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .single-blog .blog-content h3 {
+    font-size: 20px;
+  }
+  /* Knock Style */
+  .knock-us-content {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .knock-us-content h3 {
+    font-size: 25px;
+  }
+  .knock-us-btn {
+    text-align: center;
+  }
+  /* Footer Style */
+  .single-footer-widget h4 {
+    font-size: 16px;
+  }
+  .single-footer-widget h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .single-footer-widget .import-link li {
+    margin-bottom: 10px;
+  }
+  .single-footer-widget .socila-link li a {
+    width: 40px;
+    height: 40px;
+    line-height: 43px;
+  }
+  /* Page Banner Style */
+  .page-banner-content {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    display: block;
+  }
+  .page-banner-content h2 {
+    font-size: 35px;
+  }
+  .page-banner-content ul li {
+    font-size: 14px;
+  }
+  /* Our Mison Style */
+  .our-mison-area .pe-0 {
+    padding-right: 12px !important;
+  }
+  .our-mison-area .ps-0 {
+    padding-left: 12px !important;
+  }
+  .single-mison {
+    padding: 20px;
+  }
+  .single-mison h3 {
+    font-size: 20px;
+  }
+  /* Pagination Style */
+  .pagination-area {
+    margin-top: 0;
+  }
+  .pagination-area .page-numbers {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  /* Department Style */
+  .department-orthopedics-content h2 {
+    font-size: 30px;
+  }
+  .department-orthopedics-content .gap-mb-30 {
+    margin-bottom: 30px;
+  }
+  .department-orthopedics-content .pain {
+    margin-top: 15px;
+  }
+  .department-orthopedics-content iframe {
+    margin-bottom: 30px;
+    height: 400px;
+  }
+  .sidebar-widget.departments ul li {
+    margin-bottom: 10px;
+  }
+  .sidebar-widget.review .review-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.conditions .accordion {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form .src-btn {
+    top: 33px;
+    right: 35px;
+  }
+  .sidebar-widget.recent-post .recent-post-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.tags ul {
+    padding: 20px;
+  }
+  /* Doctors Style */
+  .doctor-details-content::before {
+    display: none;
+  }
+  .doctor-details-content .socila-link {
+    display: none;
+  }
+  .doctor-details-wrap {
+    padding: 20px;
+  }
+  .doctor-details-wrap .doctor-img {
+    margin-bottom: 20px;
+  }
+  .doctor-content h3 {
+    font-size: 22px;
+  }
+  .doctor-content .family {
+    margin-bottom: 20px;
+  }
+  .doctor-content ul li {
+    margin-bottom: 12px;
+  }
+  .doctor-informetion {
+    margin-bottom: 30px;
+  }
+  .doctor-informetion h2 {
+    padding: 20px;
+    font-size: 25px;
+  }
+  .doctor-informetion ul li {
+    margin-bottom: 12px;
+  }
+  .doctor-informetion ul li::after {
+    display: none;
+  }
+  /* Payment Style */
+  .payment-content {
+    margin-bottom: 30px;
+  }
+  .payment-content h2 {
+    font-size: 30px;
+  }
+  .payment-content .online-payment {
+    padding: 30px;
+  }
+  .payment-content .online-payment .form-group {
+    margin-bottom: 20px;
+  }
+  /* Appointments Style */
+  .appointments-conetnt .requestor {
+    padding: 20px;
+  }
+  .appointments-conetnt .requestor h3 {
+    font-size: 20px;
+  }
+  .appointments-conetnt .requestor ul {
+    margin-bottom: 20px;
+  }
+  .appointments-conetnt .requestor ul li span {
+    font-weight: 500;
+  }
+  .appointments-conetnt .requestor .form-group {
+    margin-bottom: 20px;
+  }
+  .appointments-conetnt .requestor .form-group label {
+    font-weight: 500;
+  }
+  /* Appointments Style */
+  .appointments-form {
+    padding: 20px;
+  }
+  .appointments-form h2 {
+    font-size: 25px;
+  }
+  .appointments-form .form-group {
+    margin-bottom: 20px;
+  }
+  /* Hospital Style */
+  .single-hospital .hospital-content {
+    padding: 20px;
+  }
+  .single-hospital .hospital-content h3 {
+    font-size: 22px;
+  }
+  .single-hospital .hospital-content .default-btn {
+    padding: 12px 35px;
+  }
+  .hospital-details-content {
+    margin-bottom: 30px;
+  }
+  .hospital-details-content h2 {
+    font-size: 30px;
+  }
+  .health-information-content {
+    margin-top: 30px;
+  }
+  .health-information-content h2 {
+    font-size: 30px;
+  }
+  .choose-consultation-content h2 {
+    font-size: 30px;
+  }
+  .single-consult-online {
+    padding: 20px;
+  }
+  .single-consult-online h2 {
+    font-size: 30px;
+  }
+  .hospital-src h2 {
+    font-size: 30px;
+  }
+  .patients-visitors-content {
+    margin-bottom: 30px;
+  }
+  .patients-visitors-content h2 {
+    font-size: 30px;
+  }
+  .single-patients {
+    padding: 20px;
+  }
+  .single-patients h3 {
+    font-size: 20px;
+  }
+  .single-patients .default-btn {
+    padding: 12px 30px;
+  }
+  .visitors-sludebar {
+    padding: 20px;
+  }
+  .patient-information-content {
+    margin-bottom: 30px;
+  }
+  .patient-information-content h2 {
+    font-size: 30px;
+  }
+  .single-patient-information {
+    padding: 20px;
+  }
+  .single-patient-information h3 {
+    font-size: 20px;
+  }
+  .login-register-form-area h2 {
+    font-size: 30px;
+  }
+  .login-register-form-area.register {
+    margin-left: 0;
+  }
+  .login-register-form-area.register::before {
+    display: none;
+  }
+  .login-register-form-area.login {
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .single-help-card {
+    padding: 20px;
+  }
+  .single-help-card h3 {
+    font-size: 20px;
+  }
+  .frequently-askeds {
+    margin-bottom: 30px;
+  }
+  .frequently-askeds h2 {
+    font-size: 30px;
+  }
+  .visitors-sludebar ul .call {
+    font-size: 20px;
+  }
+  .single-product .product-content h3 {
+    font-size: 20px;
+  }
+  .cart-totals {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .coupon-cart .form-group .default-btn {
+    height: 49px;
+  }
+  .checkout-wrap .faq-accordion {
+    margin-left: 0;
+  }
+  .cart-totals h3 {
+    font-size: 20px;
+  }
+  .checkout-wrap .faq-accordion h3 {
+    font-size: 20px;
+  }
+  /* Product Details Title */
+  .product-details-image {
+    margin-bottom: 30px;
+  }
+  .product-details-desc h3 {
+    font-size: 21px;
+  }
+  .product-details-desc .price {
+    font-size: 18px;
+  }
+  .product-details-desc .product-add-to-cart.d-flex {
+    display: block !important;
+  }
+  .product-details-desc .product-add-to-cart .default-btn {
+    margin-top: 10px;
+  }
+  .product-details-desc .sku {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .product-details-tab {
+    padding: 20px;
+  }
+  .product-details-tab .nav-tabs .nav-item .nav-link.active::before {
+    display: none;
+  }
+  .product-details-tab .product-details-review-content .product-review-form .review-comments .review-item {
+    padding-right: 0;
+  }
+  /* Blog Details Title */
+  .blog-details-content .tag {
+    font-size: 13px;
+  }
+  .blog-details-content ul li {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .blog-details-content h2 {
+    font-size: 25px;
+  }
+  .blog-details-content blockquote {
+    padding: 20px;
+  }
+  .blog-details-content blockquote img {
+    display: none;
+  }
+  .blog-details-content blockquote p {
+    font-size: 16px;
+  }
+  .blog-details-content .tag-social {
+    display: block !important;
+  }
+  .blog-details-content .tag-social .tags {
+    margin-bottom: 20px;
+  }
+  .blog-details-content .leave-from {
+    margin-bottom: 50px;
+  }
+  .left-informetion {
+    padding-right: 0;
+  }
+  .left-informetion::before {
+    display: none;
+  }
+  .left-informetion h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .right-informetion {
+    padding-left: 0;
+  }
+  .right-informetion h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .contact-form {
+    padding: 20px;
+  }
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  .contact-form .form-group label {
+    font-size: 14px;
+  }
+  .find-doctors {
+    padding: 30px;
+  }
+  .single-our-department::after {
+    display: none;
+  }
+  .single-our-department::before {
+    display: none;
+  }
+  .single-our-department .department-content.one {
+    display: none;
+  }
+  .single-our-department .department-content.hover {
+    opacity: 1;
+    position: unset;
+  }
+  .single-our-department .department-content.hover h3 {
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover .icon i {
+    left: 0;
+    top: 0;
+  }
+  .single-our-department .department-content.hover .icon::before {
+    display: none;
+  }
+  .single-our-department .department-content.hover p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .department-orthopedics-content {
+    margin-right: 0;
+  }
+  .find-doctor-title {
+    margin-bottom: 30px;
+  }
+  .find-doctor-title h3 {
+    font-size: 25px;
+  }
+  .find-doctor-title p {
+    font-size: 16px;
+  }
+  .blog-details-content {
+    margin-right: 0;
+  }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .ml-15 {
+    margin-left: 0;
+  }
+  .mr-15 {
+    margin-right: 0;
+  }
+  .mr-44 {
+    margin-right: 0;
+  }
+  .ml-44 {
+    margin-left: 0;
+  }
+  h2 {
+    line-height: 40px !important;
+  }
+  .ml-86 {
+    margin-left: 0;
+  }
+  .mr-86 {
+    margin-right: 0;
+  }
+  /* Header Style */
+  .desktop-nav .navbar .navbar-nav .nav-item a {
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  .desktop-nav .navbar .others-options {
+    margin-left: 0;
+    padding-right: 55px;
+  }
+  .desktop-nav .navbar .others-options ul li {
+    margin-right: 15px;
+  }
+  .desktop-nav .navbar .others-options ul li .default-btn {
+    padding: 8px 8px;
+  }
+  .desktop-nav .navbar .others-options ul li .default-btn span {
+    display: none;
+  }
+  .desktop-nav .navbar .others-options ul li .default-btn i {
+    display: block;
+    margin-left: 0;
+  }
+  .dark-mode-btn .dark-version .switch {
+    width: 38px;
+    height: 38px;
+  }
+  /* Hero Style */
+  .hero-content {
+    max-width: 690px;
+  }
+  .hero-content h1 {
+    font-size: 70px;
+  }
+  /* futcher Style */
+  .single-futcher h3 {
+    font-size: 20px;
+  }
+  .who-we-are-content h2 {
+    font-size: 30px;
+  }
+  .who-we-are-content p {
+    margin-bottom: 30px;
+  }
+  .single-who-we-are h3 {
+    font-size: 20px;
+  }
+  /* Header Style */
+  .single-our-department .department-content {
+    padding: 15px;
+  }
+  .single-our-department .department-content h3 {
+    font-size: 22px;
+  }
+  .single-our-department:hover .department-content.hover {
+    display: none;
+  }
+  .single-our-department::before {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  /* choose Style */
+  .choose-us-area {
+    background-image: unset;
+  }
+  .choose-us-content ul li h3 {
+    font-size: 22px;
+  }
+  .choose-us-content ul li span::before {
+    height: 130px;
+  }
+  /* urgent Style */
+  .single-team h3 {
+    font-size: 20px;
+  }
+  .single-urgent {
+    padding: 20px;
+  }
+  .single-urgent h3 {
+    font-size: 22px;
+  }
+  /* solution Style */
+  .single-solution h3 {
+    font-size: 22px;
+  }
+  /* appointment Style */
+  .appointment-img h3 {
+    left: 30px;
+    right: 30px;
+  }
+  .ml100 {
+    margin-left: 0;
+  }
+  .appointment-form {
+    padding: 30px;
+  }
+  .knock-us-content {
+    padding-left: 0;
+  }
+  .knock-us-btn {
+    padding-right: 0;
+  }
+  /* blog Style */
+  .single-blog .blog-content h3 {
+    font-size: 22px;
+  }
+  .single-blog .blog-content .tag {
+    font-size: 13px;
+  }
+  .single-blog .blog-content ul li {
+    margin-right: 5px;
+    font-size: 13px;
+  }
+  /* knock Style */
+  .knock-us-content h3 {
+    font-size: 30px;
+  }
+  /* Footer Style */
+  .single-footer-widget h3 {
+    font-size: 22px;
+  }
+  .single-footer-widget .socila-link li {
+    margin-right: 0;
+  }
+  /* Page Banner Style */
+  .page-banner-content h2 {
+    font-size: 50px;
+  }
+  .page-banner-content ul li {
+    font-size: 14px;
+  }
+  /* Doctor Style */
+  .doctor-details-wrap {
+    padding: 100px 205px;
+  }
+  .sidebar-widget.appointment-time ul li .default-btn {
+    padding: 12px 30px;
+  }
+  .sidebar-widget h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .sidebar-widget ul {
+    padding: 20px;
+  }
+  .sidebar-widget.review .review-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.conditions .accordion {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form {
+    padding: 20px;
+  }
+  .sidebar-widget .src-form .src-btn {
+    top: 33px;
+    right: 35px;
+  }
+  .sidebar-widget.recent-post .recent-post-wrap {
+    padding: 20px;
+  }
+  .sidebar-widget.tags ul {
+    padding: 20px;
+  }
+  /* Payment Style */
+  .payment-content h2 {
+    font-size: 30px;
+  }
+  .payment-content .online-payment {
+    padding: 30px;
+  }
+  /* Hospital Style */
+  .single-hospital .hospital-content {
+    padding: 20px;
+  }
+  .single-hospital .hospital-content h3 {
+    font-size: 22px;
+  }
+  .single-hospital .hospital-content .default-btn {
+    padding: 12px 35px;
+  }
+  .hospital-details-content h2 {
+    font-size: 30px;
+  }
+  .health-information-content h2 {
+    font-size: 30px;
+  }
+  .choose-consultation-content h2 {
+    font-size: 30px;
+  }
+  .single-consult-online h2 {
+    font-size: 30px;
+  }
+  .hospital-src h2 {
+    font-size: 30px;
+  }
+  .section-title h2 {
+    font-size: 30px;
+  }
+  .patients-visitors-content h2 {
+    font-size: 30px;
+  }
+  .single-patients {
+    padding: 20px;
+  }
+  .single-patients h3 {
+    font-size: 20px;
+  }
+  .single-patients .default-btn {
+    padding: 12px 30px;
+  }
+  .patient-information-content h2 {
+    font-size: 30px;
+  }
+  .single-patient-information {
+    padding: 20px;
+  }
+  .single-patient-information h3 {
+    font-size: 20px;
+  }
+  .login-register-form-area.register {
+    margin-left: 0;
+  }
+  .login-register-form-area.register::before {
+    display: none;
+  }
+  .login-register-form-area.login {
+    margin-right: 0;
+  }
+  .single-help-card {
+    padding: 20px;
+  }
+  .single-help-card h3 {
+    font-size: 20px;
+  }
+  .frequently-askeds h2 {
+    font-size: 30px;
+  }
+  .visitors-sludebar ul .call {
+    font-size: 20px;
+  }
+  .single-product .product-content h3 {
+    font-size: 22px;
+  }
+  .cart-totals {
+    margin-left: 0;
+  }
+  .checkout-wrap .faq-accordion {
+    margin-left: 0;
+  }
+  .cart-totals h3 {
+    font-size: 20px;
+  }
+  .checkout-wrap .faq-accordion h3 {
+    font-size: 20px;
+  }
+  .product-details-desc .sku {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .left-informetion h2 {
+    font-size: 30px;
+  }
+  .right-informetion h2 {
+    font-size: 30px;
+  }
+  .find-doctors {
+    padding: 30px;
+  }
+  .doctor-details-wrap {
+    padding-right: 100px;
+  }
+  .appointments-conetnt .requestor {
+    padding: 50px;
+  }
+  .single-our-department::after {
+    display: none;
+  }
+  .single-our-department::before {
+    display: none;
+  }
+  .single-our-department .department-content.one {
+    display: none;
+  }
+  .single-our-department .department-content.hover {
+    opacity: 1;
+    position: unset;
+  }
+  .single-our-department .department-content.hover h3 {
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .single-our-department .department-content.hover .icon i {
+    left: 0;
+    top: 0;
+  }
+  .single-our-department .department-content.hover .icon::before {
+    display: none;
+  }
+  .single-our-department .department-content.hover p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .department-orthopedics-content {
+    margin-right: 0;
+  }
+  .blog-details-content {
+    margin-right: 0;
+  }
+}
+
+/* Mobile and iPad Navbar */
+@media only screen and (max-width: 991px) {
+  .navbar-area {
+    border-bottom: 1px solid #efefef;
+    z-index: 2;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .navbar-area .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar-area .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-area.navbar-top {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .navbar-area .is-sticky {
+    border: none;
+  }
+  .mobile-responsive-nav {
+    display: block;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .nav-item .row {
+    display: block;
+    -ms-flex-wrap: unset;
+        flex-wrap: unset;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -20px;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .nav-item .row .col {
+    -ms-flex-preferred-size: unset;
+        flex-basis: unset;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 20px;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .nav-item .row .col .sub-menu-title {
+    padding: 1em 10%;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .sub-menu {
+    width: auto;
+    overflow: hidden;
+    display: block !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .sub-menu li a {
+    padding: 1em 10%;
+  }
+  .mobile-responsive-nav .mean-container .navbar-nav .nav-item.mega-menu .dropdown-menu .sub-menu li:last-child a {
+    padding-bottom: 0;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu {
+    position: relative;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu .logo {
+    position: relative;
+    z-index: 2;
+    max-width: 120px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav {
+    margin-top: 67px;
+    background-color: #ffffff;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul {
+    border: none !important;
+    background-color: #ffffff;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a {
+    border-top-color: #efefef;
+    color: #111111 !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a i {
+    display: none;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.mean-expand {
+    width: 100%;
+    height: 28px;
+    text-align: right;
+    padding: 11px !important;
+    background: transparent !important;
+    border-left: none !important;
+    border-bottom: none !important;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li a.active {
+    color: #0057b8 !important;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-nav ul li li a {
+    font-size: 15px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav {
+    -webkit-box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 0 !important;
+    max-height: 50vh;
+    overflow-y: scroll;
+    /* width */
+    /* Track */
+    /* Handle */
+    /* Handle on hover */
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar {
+    width: 7px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .navbar-nav::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal {
+    top: 0;
+    padding: 0;
+    width: 35px;
+    height: 30px;
+    padding-top: 15px;
+    color: #0057b8;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container a.meanmenu-reveal span {
+    background: #0057b8;
+    height: 4px;
+    margin-top: -6px;
+    border-radius: 0;
+    position: relative;
+    top: 8px;
+  }
+  .mobile-responsive-nav .mobile-responsive-menu.mean-container .mean-bar {
+    background: transparent;
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+  }
+  .mobile-responsive-nav .others-options {
+    display: none !important;
+  }
+  .desktop-nav {
+    display: none !important;
+  }
+  .others-option-for-responsive {
+    display: block !important;
+  }
+  .fixed-top {
+    position: unset;
+  }
+  .navbar-area.is-sticky {
+    top: -1px;
+  }
+  /* Dark Mode Style */
+  .dark-mode-btn {
+    bottom: 2px;
+  }
+  .dark-mode-btn .dark-version {
+    bottom: 20px;
+    right: -10px;
+  }
+  .dark-mode-btn .dark-version .switch {
+    width: 38px;
+    height: 38px;
+  }
+  .swiper-pagination-bullet {
+    color: #111111;
+  }
+  .swiper-pagination-bullet-active {
+    color: #ffffff;
+  }
+}
+
+/* Continuer Custom Width Area Style */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    max-width: 1320px;
+  }
+  .ml100 {
+    margin-left: 0;
+  }
+}
+
+/* Continuer Custom Width Area Style */
+@media only screen and (min-width: 1400px) and (max-width: 1550px) {
+  .ml100 {
+    margin-left: 0;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

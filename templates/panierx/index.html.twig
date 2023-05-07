@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+  <a href="{{ path('app_panier_show') }}" >
+             <button style="    margin-right: 18px;
+    float: right;"
+      type="button" class="btn btn-success">Panier {{qte}}</button>
+</a>
+<table class="table">
+        <thead>
+            <tr>
+              <th>Image</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Nom ph</th>
+                  
+
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for medicament in medicaments %}
+            <tr>
+             {% if medicament.image == "" %}
+                <td> pas d'image </td>
+                {% else %}
+                <td><img src={{ asset('uploads/medicament/' ~ medicament.image) }}" style="width:70px"></td>
+                {% endif %}
+                <td>
+                <td>{{ medicament.Nom }}</td>
+                <td>{{ medicament.Type }}</td>
+                <td>{{ medicament.Prix }}</td>
+               
+
+                
+               {% for pharmacy in medicament.id_pharmacie %}
+           <td> {{ pharmacy.nom }}  </td>
+
+
+                 </td>
+
+               
+
+                 
+
+          
+              {# {% if not loop.last %}, {% endif %} #}
+             {% endfor %}
+
+              <td>
+
+
+                <a href="{{ path('app_panierx', {'id': medicament.id}) }}"> 
+                                 <button type="button" class="btn btn-primary">Ajouter</button>
+
+                </a>
+
+                </td>
+
+
+                   {% endfor %}
+
+            </tr>
+
+
+            
+        </tbody> 
+    </table>
+
+   
+
+ </div>
+{% endblock %}

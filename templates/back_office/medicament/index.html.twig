@@ -1,0 +1,59 @@
+
+
+{% extends 'back_office/base.html.twig' %}
+{% block content %}
+
+
+    <!-- begin::Body -->
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+
+   <div class="container">
+ <a href="{{ path('app_medicament_new') }}"><button type="submit" class="btn btn-primary">
+                     <i class="fas fa-pencil-alt"></i> Ajouter Médicament
+                    </button></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Nombre des doses</th>
+                <th>Prix</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for medicament in medicaments %}
+            <tr>
+                <td>{{ medicament.id }}</td>
+                <td>{{ medicament.Nom }}</td>
+                <td>{{ medicament.Type }}</td>
+                <td>{{ medicament.NbDose }}</td>
+                <td>{{ medicament.Prix }}</td>
+                <td>{{ medicament.Stock }}</td>
+                <td>
+                <a href="{{ path('app_medicament_edit', {'id': medicament.id}) }}">
+             <button type="button" class="btn btn-primary">Modifier</button>
+                     <a href="{{ path('app_medicament_show', {'id': medicament.id}) }}">
+             <button type="button" class="btn btn-primary">Show</button>                 
+             <a href="{{ path('app_medicament_delete', {'id': medicament.id}) }}">
+             <button type="button" class="btn btn-danger">Effacer</button>                  
+    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucune données</td>
+            </tr>
+        {% endfor %}
+        </tbody> 
+    </table>
+
+   
+
+ </div>
+    </body>
+
+
+{% endblock %}

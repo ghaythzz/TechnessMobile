@@ -1,0 +1,83 @@
+{% extends 'back_office/base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <div class="row" style="margin-left:250px">
+        <!--end col-->
+        <div class="col-xxl-12">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="personalDetails" role="tabpanel">
+                            {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            {{ form_label(form.nom) }}
+                                            {{ form_widget(form.nom) }}
+                                            {{ form_errors(form.nom) }}
+
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-6">
+                                        <div class="mb-3">
+                                            {{ form_label(form.capacite) }}
+                                            {{ form_widget(form.capacite) }}
+                                        </div>
+                                    </div>
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            {{ form_label(form.local) }}
+                                            {{ form_widget(form.local) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            {{ form_label(form.date) }}
+                                            {{ form_widget(form.date) }}
+                                        </div>
+                                    </div><div class="col-lg-12">
+                                        <div class="mb-3">
+                                            {{ form_label(form.prix) }}
+                                            {{ form_widget(form.prix) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            {{ form_label(form.type) }}
+                                            {{ form_widget(form.type,{'attr': {'class': 'form-control'}}) }}
+                                            {{ form_errors(form.type) }}
+                                        </div>
+                                    </div>
+                                     <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            {{ form_label(form.description) }}
+                                            {{ form_widget(form.description) }}
+                                            {{ form_errors(form.description) }}
+                                        </div>
+                                        
+                                    
+                                   
+                                    <!--end col-->
+                                    <div class="col-lg-12">
+                                    <div class="hstack gap-2 justify-content-end">
+                                        <button type="submit" class="btn btn-outline-success">Update</button>
+                                        <button type="button" class="btn btn-outline-info"><a href="{{ path('app_evenement_index') }}">cancel</a> </button>
+                                    </div>
+                                </div> 
+                                </div>
+                                <!--end row-->
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end col-->
+    </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+		<!-- Start Contact Area -->
+		<div class="contact-area pb-100">
+			<div class="container">
+				<div class="contact-form">
+					<h3>Update your profile</h3>
+					<a style="width: 220px;margin-bottom: 10px" href="{{path('modifierImage',{'id':app.user.id})}}" class="default-btn active">Update Image</a>
+					{% if app.user %}
+					{%  if is_granted('ROLE_MEDECIN') %}
+					{%  if app.user.status==null %}
+					<a style="width: 220px;margin-bottom: 10px;background-color: #28a745" href="{{path('verifierProfile',{'id':app.user.id})}}" class="default-btn active">Verify Account</a>
+					{% endif %}
+					{% endif %}
+					{% endif %}
+
+					{{ form_start(form) }}
+
+						{{ form_row(form.nom) }}
+						{{ form_row(form.prenom) }}
+						{{ form_row(form.speciality) }}
+						{{ form_row(form.numero) }}
+						{{ form_row(form.adresse) }}
+ 						{{ form_row(form.bioDescription) }}
+						{{ form_end(form) }}
+
+					<a style="width: 300px;margin-left: 430px ; background-color: red" href="{{path('deleteAccount',{'id':app.user.id})}}" class="default-btn active">
+						Delete Account
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Contact Area -->
+
+
+		<!-- Start Dark Mode Area -->
+		<div class="dark-mode-btn">
+			<div class="container">
+				<div class="dark-version">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- End Dark Mode Area -->
+
+
+		<!-- Start Copyright Area -->
+		<div class="copy-right-area">
+			<div class="container">
+				<p>© Bexi is Proudly Owned by <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+			</div>
+		</div>
+		<!-- End Copyright Area -->
+
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        <!-- Links of JS File -->
+
+    </body>
+
+{% endblock %}

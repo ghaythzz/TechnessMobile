@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <body>
+		<!-- Start Preloader Area -->
+		<div class="preloader">
+			<div class="lds-ripple">
+				<div class="preloader-container">
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal"></div>
+					<div class="petal-1"></div>
+					<div class="petal-1"></div>
+					<div class="petal-1"></div>
+					<div class="ball"></div>
+				</div>
+			</div>
+		</div>
+		<!-- End Preloader Area -->
+		
+		<!-- Start Coming Soon Area -->
+		<div class="coming-soon-area">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="coming-soon-content">
+						<a href="index.html" class="mb-30 d-block">
+							<img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/logo.png" alt="Image">
+						</a>
+
+						<h2>Coming Soon</h2>
+						
+                        <div id="timer" class="flex-wrap d-flex justify-content-center">
+                            <div id="days" class="align-items-center flex-column d-flex justify-content-center"></div>
+                            <div id="hours" class="align-items-center flex-column d-flex justify-content-center"></div>
+                            <div id="minutes" class="align-items-center flex-column d-flex justify-content-center"></div>
+                            <div id="seconds" class="align-items-center flex-column d-flex justify-content-center"></div>
+						</div>
+						
+                        <form class="newsletter-form" data-toggle="validator">
+                            <div class="form-group">
+                                <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
+							</div>
+							
+                            <button type="submit" class="default-btn">
+								Subscribe
+							</button>
+
+                            <div id="validator-newsletter" class="form-result"></div>
+                            <p>If you would like to be notified when your app is live, Please subscribe to our mailing list.</p>
+                        </form>
+                    </div>
+                </div>
+			</div>
+        </div>
+        <!-- End Coming Soon Area -->
+
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        <!-- Links of JS File -->
+        <script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/jquery.min.js"></script>
+        <script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/bootstrap.bundle.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/meanmenu.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/owl.carousel.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/swiper-bundle.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/appear.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/odometer.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/wow.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/jspdf.debug.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/form-validator.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/contact-form-script.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/ajaxchimp.min.js"></script>
+		<script src="../../../doc123/templates.envytheme.com/bexi/default/assets/js/custom.js"></script>
+    </body>
+
+{% endblock %}

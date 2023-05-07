@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+	
+
+		
+
+		<!-- Start Page Banner Area -->
+		<div class="page-banner-area bg-10 pt-100">
+			<div class="container">
+				<div class="page-banner-content">
+					<h2> {{ all.nom }}</h2>
+					<ul>
+                        <li>
+							<a href="{{path('app_reservation_index')}}">
+								<i class="ri-home-8-line"></i>
+								Display Consultation 
+							</a>
+						</li>
+						<li>
+							<a href="{{path('app_reservation_specialite')}}">
+								<i class="ri-home-8-line"></i>
+								Return 
+							</a>
+						</li>
+						<li>
+							<span>{{ all.nom }}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Banner Area -->
+
+		<!-- Start Hospital Details Area -->
+		<div class="hospital-details-area ptb-100">
+			<div class="container">
+				<div class="row">
+                    <table class="table">
+                        <tbody>
+                       
+                               
+                                <tr>
+                                    <th>Nom</th>
+                                   
+                                    <th>Prix </th>
+                                    <th>Rate </th>
+									<th>Adresse </th>
+
+									<th>Actions</th>
+                                  
+                                   
+                                </tr>
+                                {% for i in med %}
+                                <tr>
+                                    <td>{{ i.nom }}</td>
+                                   
+                                    <td>{{ i.prix }}</td>
+									<td>
+										{% if i.rates >= 1 %}
+										<i class="ri-star-s-fill"></i>
+										{%endif%}
+										{% if i.rates  >= 2 %}
+										<i class="ri-star-s-fill"></i>
+										{%endif%}
+										{% if i.rates >= 3 %}
+										<i class="ri-star-s-fill"></i>
+										{%endif%}
+										{% if i.rates >= 4 %}
+										<i class="ri-star-s-fill"></i>
+										{%endif%}
+										{% if i.rates ==5 %}
+										<i class="ri-star-s-fill"></i>
+										   {%endif%}</td>
+									
+									<td>{{ i.adresse }}</td>
+									
+                                   
+									<td><a href="{{ path('app_reservation_new' , {'id': i.id} ) }}">Continue</a> </td>
+                                
+                                </tr>
+                         
+							
+                            {% endfor %}
+
+              
+                        </tbody>
+                    </table>
+                    
+					
+					
+				</div>
+			</div>
+		</div>
+
+
+	
+
+
+    </body>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset('backOffice/assets/css/custom/dataTables.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block body %}
+    <div class="hospital-area ptb-100">
+        <div class="container-fluid">
+            <div class="section-title">
+                <h2>Hospital, Urgent Care, and Other Health Facility Locations</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                {% for patient in patients %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-hospital">
+                            <a href="#">
+                                {% if patient.image %}
+                                    <img src="{{ asset('uploads/' ~ patient.image) }}" style="width: 100%; height: 250px; object-fit: cover;" alt="Image">
+                                {% else %}
+                                    <img src="{{ asset('frontOffice/assets/images/placeholder.png') }}" style="width: 100%; height: 250px; object-fit: cover;" alt="Image">
+                                {% endif %}
+                            </a>
+                            <div class="hospital-content">
+                                <h3>
+                                    {{ patient.nom|capitalize }} {{ patient.prenom }}
+                                </h3>
+
+                                <a href="{{ path('app_fiche_index', {'id': patient.id}) }}" class="default-btn active">
+                                    Voir fiche
+                                </a>
+                                <br>
+                                <a href="{{ path('app_fiche_pdf', {'id': patient.id}) }}" target="_blank" class="default-btn active">
+                                    Generate PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+<script src="{{ asset('backOffice/assets/js/custom/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backOffice/assets/js/custom/dataTables.bootstrap5.min.js') }}"></script>
+<script>
+    $('#ordonance-list').DataTable();
+</script>
+{% endblock %}

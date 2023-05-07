@@ -1,0 +1,230 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+<body>
+
+<!--  Start Header Area -->
+<div class="top-header-area bg-color-091c47">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+
+            </div>
+
+            <div class="col-lg-4">
+                <ul class="header-right-content">
+                    <li>
+                        <i class="ri-user-3-line"></i>
+                        <a href="{{path('login')}}">Login</a>
+                    </li>
+                    <li>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>English</option>
+                            <option value="1">China</option>
+                            <option value="2">العربيّة</option>
+                            <option value="3">Germany</option>
+                            <option value="4">Portugues</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Area -->
+
+<!-- Start Page Banner Area -->
+<div class="page-banner-area bg-22 pt-100">
+    <div class="container">
+        <div class="page-banner-content">
+            <a href="{{path('home')}}">
+                <i class="ri-home-8-line"></i>
+                Home
+            </a>
+            <h2>DocNet.Ordonnace</h2>
+
+        </div>
+    </div>
+</div>
+<!-- End Page Banner Area -->
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ordonnance.id }}</td>
+            </tr>
+            <tr>
+                <th>NomMedecin</th>
+                <td>{{ ordonnance.nomMedecin }}</td>
+            </tr>
+            <tr>
+                <th>NomPatient</th>
+                <td>{{ ordonnance.nomPatient }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ ordonnance.date ? ordonnance.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Commentaire</th>
+                <td>{{ ordonnance.commentaire }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_ordonnance_index') }}">back to list</a>
+
+    <a href="{{ path('app_ordonnance_edit', {'id': ordonnance.id}) }}">edit</a>
+
+    {{ include('ordonnance/_delete_form.html.twig') }}
+
+    <!-- Start Footer Area -->
+    <div class="footer-area bg-color-f1f5f8 pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <a href="index.html.twig" class="logo">
+                            <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/logo.png" class="main-logo" alt="logo">
+                            <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/white-logo.png" class="white-logo" alt="logo">
+                        </a>
+                        <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie.</p>
+                        <h4>177 Devon Lane Miami, MK 3355</h4>
+                        <ul class="info">
+                            <li>
+                                <span>EMAIL US:</span>
+                                <a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#2f464149406f4d4a5746014c4042"><span class="__cf_email__" data-cfemail="274e4941486745425f4e0944484a">[email&#160;protected]</span></a>
+                            </li>
+                            <li>
+                                <span>CALL US:</span>
+                                <a href="tel:1-885-665-2022">1-885-665-2022</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Departments</h3>
+
+                        <ul class="import-link">
+                            <li>
+                                <a href="department.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Emergency Departments
+                                </a>
+                            </li>
+                            <li>
+                                <a href="department-orthopedics.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Orthopedics
+                                </a>
+                            </li>
+                            <li>
+                                <a href="department.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Neurosciences
+                                </a>
+                            </li>
+                            <li>
+                                <a href="department.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Gastroenterology
+                                </a>
+                            </li>
+                            <li>
+                                <a href="department.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Bariatric Surgery
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Helpful Links</h3>
+
+                        <ul class="import-link">
+                            <li>
+                                <a href="find-a-doctor.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Find a Doctor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="hospital.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Find a Hospital
+                                </a>
+                            </li>
+                            <li>
+                                <a href="products.html.twig.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Buy Medicine
+                                </a>
+                            </li>
+                            <li>
+                                <a href="terms-conditions.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Terms of Use
+                                </a>
+                            </li>
+                            <li>
+                                <a href="privacy-policy.html.twig">
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    Privacy Policy
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3>Subscribe Our Newsletter</h3>
+
+                        <form class="newsletter-form" data-toggle="validator">
+                            <input type="email" class="form-control" placeholder="Email address" name="EMAIL" required autocomplete="off">
+
+                            <button class="default-btn" type="submit">
+                                Submit now
+                            </button>
+
+                            <div id="validator-newsletter" class="form-result"></div>
+                        </form>
+
+                        <ul class="socila-link">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/svg-icon/facebook.svg" alt="Image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/svg-icon/twitter.svg" alt="Image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/svg-icon/linkedin.svg" alt="Image">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/svg-icon/instagram.svg" alt="Image">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer Area -->
+{% endblock %}

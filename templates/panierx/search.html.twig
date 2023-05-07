@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    
+ <a href="{{ path('app_panier_show') }}" >
+             <button style="    margin-right: 18px;    float: right;"
+      type="button" class="btn btn-success"><i class="bi bi-cart"></i> Panier {{qte}}</button>
+
+</a>
+
+<i class="fa fa-undo"></i>
+
+    </button>
+</a>
+    </div>
+        <form id="search-form" method="post">
+            <div class="form-group">
+                <label for="search-term">Recherche par Nom ou Prix</label>
+                <input type="text" name="searchTerm" id="search-term" class="form-control" value="{{ searchTerm }}">
+            </div>
+        </form>
+        <div id="search-results">
+            {% include 'panierx/_table.html.twig' %}
+        </div>
+    </div>
+
+    {% block javascripts %}
+    <script
+            src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')}}">
+    </script>
+    <script>
+     $('#search-form').on('input',function(event) {
+    event.preventDefault();
+    var searchTerm = $('#search-term').val();
+    $.ajax({
+        type: 'post',
+        url: '{{ path('search_medicament') }}',
+        data: {searchTerm: searchTerm},
+        success: function(response) {
+            // Replace the table in the search results div with the new table HTML
+            $('#search-results table').replaceWith(response);
+        }
+    });
+});
+    </script>
+{% endblock %}
+{% endblock %}

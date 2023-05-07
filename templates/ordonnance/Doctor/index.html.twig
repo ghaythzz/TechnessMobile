@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+{% block body %}
+    <br>
+    <div class="find-doctor-area">
+        <div class="container-fluid">
+            {{ form_start(form, {'attr':{'class':'find-doctors','style':'padding: 20px 20px; border-radius: 10px;'}}) }}
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>SEARCH BY:</label>
+                        <div class="form-group">
+                            {{ form_widget(form.name) }}
+                            <i class="ri-search-line"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>{{ form_label(form.date) }}</label>
+                        <div class="form-group">
+                            {{ form_widget(form.date) }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label>{{ form_label(form.commentaire) }}</label>
+                        <div class="form-group">
+                            {{ form_widget(form.commentaire) }}
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <button type="button" id="submit-search-btn" class="default-btn" style="background-color: #4e8712; border-color: #4e8712;">
+                            Search
+                        </button>
+                    </div>
+                    <div class="col-lg-4">
+                        <a type="button" href="{{ path('app_ordonnance_index') }}" class="default-btn" style="background-color: #c43535; border-color: #c43535;">
+                            Reset
+                        </a>
+                    </div>
+                </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+    <br>
+    <div id="search-results"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cart-wrap">
+                    <div class="cart-table table-responsive" id="response-content">
+                        {% include 'ordonnance/Doctor/table_content.html.twig' %}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script>
+        const route = "{{ path('app_ordonnance_index')|escape('js') }}"
+        const inputName = $('#ordonnance_filter_name');
+        const inputDate = $('#ordonnance_filter_date');
+        const inputCommentaire = $('#ordonnance_filter_commentaire');
+        $('#submit-search-btn').on('click', function(){
+            let searchName = inputName.val()
+            let searchDate = inputDate.val()
+            let searchCommentaire = inputCommentaire.val()
+            let urlSearchParams = new URLSearchParams();
+            urlSearchParams.append('name',searchName)
+            urlSearchParams.append('date',searchDate)
+            urlSearchParams.append('commentaire',searchCommentaire)
+            $.ajax({
+                url: route + '?' + urlSearchParams.toString(),
+                type: 'GET',
+                success: function(response) {
+                    $('#response-content').html(response.data)
+                }
+            })
+        })
+       /* $(document).ready(function() {
+            console.log(route)
+            $('#search-form').submit(function(event) {
+                event.preventDefault();
+
+                var query = $('#query').val();
+
+                $.ajax({
+                    url: "{{ path('search_users') }}",
+                    data: { query: query },
+                    success: function(data) {
+
+                        $('#search-results').html(results);
+
+                    }
+                });
+            });*/
+    </script>
+{% endblock %}

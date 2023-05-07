@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+{% block stylesheet %}
+    {{ parent() }}
+    <link href="{{ asset('backOffice/assets/css/custom/dataTables.bootstrap5.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block body %}
+    <div class="our-team-area ptb-100">
+        <div class="container">
+            <div class="section-title team-title">
+                <span class="top-title">VOS PATIENTS</span>
+                <h2>We have all the professional specialists in our hospital</h2>
+            </div>
+
+            <div class="row justify-content-center">
+                {% for ordonnance in patients %}
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-team">
+                        <img src="{{ asset('uploads/' ~ ordonnance.image) }}" alt="Image">
+                        <span>{{ ordonnance.nom }} {{ ordonnance.prenom }}</span>
+                        <h3>
+                            <a href="{{ path('app_fiche_index', {'id': ordonnance.id}) }}">Fiche</a>
+                        </h3>
+                        <h3>
+                            <a href="{{ path('app_fiche_edit', {'id': ordonnance.id}) }}">Edit Fiche</a>
+                        </h3>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-lg-12">
+                    <div class="pagination-area">
+                        <a href="find-a-doctor.html" class="next page-numbers">
+                            <i class="ri-arrow-left-line"></i>
+                        </a>
+                        <span class="page-numbers current" aria-current="page">1</span>
+                        <a href="find-a-doctor.html" class="page-numbers">2</a>
+                        <a href="find-a-doctor.html" class="page-numbers">3</a>
+
+                        <a href="find-a-doctor.html" class="next page-numbers">
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+{{ parent() }}
+<script src="{{ asset('backOffice/assets/js/custom/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backOffice/assets/js/custom/dataTables.bootstrap5.min.js') }}"></script>
+<script>
+    $('#ordonance-list').DataTable();
+</script>
+{% endblock %}

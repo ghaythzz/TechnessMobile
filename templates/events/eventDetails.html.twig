@@ -1,0 +1,63 @@
+{% extends 'nav_con.html.twig' %}
+
+{% block title %}Evenement
+{% endblock %}
+{% block body %}
+	{% block content %}
+		<div class="d-flex" style="margin-top:100px; margin-left:400px">
+			
+			<div >
+				<h1>Evenement details</h1>
+
+				<table class="table">
+					<tbody>
+						<tr>
+							<th>Id</th>
+							<td>{{ evenement.id }}</td>
+						</tr>
+						<tr>
+							<th>Nom</th>
+							<td>{{ evenement.nom }}</td>
+						</tr>
+						<tr>
+							<th>Capacite</th>
+							<td>{{ evenement.capacite }}</td>
+						</tr>
+						<tr>
+							<th>Local</th>
+							<td>{{ evenement.local }}</td>
+						</tr>
+						<tr>
+							<th>Date</th>
+							<td>{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</td>
+						</tr>
+						<tr>
+							<th>Prix</th>
+							<td>{{ evenement.prix }}</td>
+						</tr>
+						<tr>
+							<th>type</th>
+							<td>{{ evenement.type }}</td>
+						</tr>
+						<tr>
+							<th>description</th>
+							<td>{{ evenement.description }}</td>
+						</tr>
+						
+
+					</tbody>
+				</table>
+				                   	
+
+
+			</div>
+			<div >
+
+	<img style="margin-left:150px;margin-top:20px;" src="{{ qr_code_data_uri(  "Nom  :" ~ evenement.nom ~ "\n Date : " ~ evenement.date | date ~ "\n Prix : " ~ evenement.prix  ,  ) }}" >
+
+				</div> 
+		</div>
+
+
+	{% endblock %}
+{% endblock %}

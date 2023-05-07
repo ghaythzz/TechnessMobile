@@ -1,0 +1,62 @@
+{% extends 'back_office/base.html.twig' %}
+
+{% block title %}Evenements{% endblock %}
+
+{% block body %}
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <h1>Nos Evenements</h1>
+
+    <table class="table" style="margin-left:300px">
+        <thead>
+            <tr>
+               
+                <th>Nom</th>
+                <th>Capacite</th>
+                <th>Local</th>
+                <th>Date</th>
+                <th>Prix</th>
+                <th>type</th>
+                
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evenement in evenements %}
+            <tr>
+             
+                <td>{{ evenement.nom }}</td>
+                <td>{{ evenement.capacite }}</td>
+                <td>{{ evenement.local }}</td>
+                <td>{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</td>
+                <td>{{ evenement.prix }}</td>
+                <td>{{ evenement.type }}</td>
+                
+
+                <td>
+                   <button type="button" class="btn btn-outline-info"><a href="{{ path('app_evenement_show', {'id': evenement.id}) }}">show</a></button>
+
+
+                    <button type="button" class="btn btn-outline-warning"><a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">edit</a></button>
+
+                    
+                    <button type="button" class="btn btn-outline-danger"><a href="{{ path('app_evenement_delete', {'id': evenement.id}) }}">delete</a></button>
+
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        
+    </table>
+ 
+<div class="d-grid gap-2 d-md-block">
+<button type="button" class="btn btn-outline-success"  style="float: right;"><a href="{{ path('app_evenement_new') }}">Create new</a> </button>
+
+  
+</div>
+   </body>
+{% endblock %}

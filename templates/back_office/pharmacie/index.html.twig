@@ -1,0 +1,58 @@
+{% extends 'back_office/homeAdmin.html.twig' %}
+{% block content %}
+
+
+    <!-- begin::Body -->
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+<div class="container">
+ <a href="{{ path('app_pharmacie_new') }}"><button type="submit" class="btn btn-primary">
+                     <i class="fas fa-pencil-alt"></i> Ajouter Pharmacie
+                    </button></a></a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Temps Overture</th>
+                <th>Temps de fermeture</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pharmacie in pharmacies %}
+            <tr>
+                <td>{{ pharmacie.id }}</td>
+                <td>{{ pharmacie.Nom }}</td>
+                <td>{{ pharmacie.Adresse }}</td>
+                <td>{{ pharmacie.Tempo ? pharmacie.Tempo|date('H:i:s') : '' }}</td>
+                <td>{{ pharmacie.tempf ? pharmacie.tempf|date('H:i:s') : '' }}</td>
+                <td>
+                    
+
+                    <a href="{{ path('app_pharmacie_edit', {'id': pharmacie.id}) }}">
+             <button type="button" class="btn btn-primary">Modifier</button>
+                     <a href="{{ path('app_pharmacie_show', {'id': pharmacie.id}) }}">
+             <button type="button" class="btn btn-primary">Show</button>                 
+             <a href="{{ path('app_pharmacie_delete', {'id': pharmacie.id}) }}">
+             <button type="button" class="btn btn-danger">Effacer</button>                  
+    </a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">Aucun informations</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+ 
+   <!--<button type="submit" class="btn btn-primary" a href="{{ path('app_pharmacie_new') }}">Ajouter Pharmacie</button>!-->
+   
+                    </div>
+
+
+    </body>
+
+
+{% endblock %}

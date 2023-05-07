@@ -1,0 +1,37 @@
+{% extends 'back_office/base.html.twig' %}
+
+{% block title %}Participation index{% endblock %}
+
+{% block body %}
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <h1>Participation index</h1>
+
+    <table class="table" style="margin-left:300px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participation in participations %}
+            <tr>
+                <td>{{ participation.id }}</td>
+                
+                <td>
+                    <form method="post" action="{{ path('app_participation_delete', {'id': participation.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ participation.id) }}">
+    <button class="btn btn-outline-danger">Delete</button>
+</form>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+{% endblock %}

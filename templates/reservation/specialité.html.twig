@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+	
+
+	
+
+		
+
+		
+		<!-- Start Hospital Details Area -->
+		<div class="hospital-details-area ptb-100">
+			<div class="container">
+				<div class="row">
+					<table class="table">
+                        <thead>
+                            <tr>
+                               
+                                
+                                <th>Specialite</th>
+                               
+                              
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for i in specialite %}
+                            <tr>
+                             
+                               
+                                <td>{{ i.nom }}</td>
+              
+                                <td>
+                                    <a href="{{ path('app_reservation_med', {'id': i.id} ) }}">Select</a>
+                                    
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="4">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                
+                    
+					
+				</div>
+			</div>
+		</div>
+		<!-- End Hospital Details Area -->
+
+	
+    </body>
+
+{% endblock %}

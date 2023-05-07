@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+	
+
+		
+
+		<!-- Start Page Banner Area -->
+		<div class="page-banner-area bg-10 pt-100">
+			<div class="container">
+				<div class="page-banner-content">
+					<h2>Your Consultation</h2>
+					<ul>
+						<li>
+							<a href="{{path('app_reservation_index')}}">
+								<i class="ri-home-8-line"></i>
+								Display Consultations 
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Banner Area -->
+
+		<!-- Start Hospital Details Area -->
+		<div class="hospital-details-area ptb-100">
+			<div class="container">
+				<div class="row">
+                    <table class="table">
+
+                        <tbody>
+                            
+                            <tr>
+                                <th>Date Debut</th>
+								<td>{{ reservation.start ? reservation.start|date('Y-m-d') : '' }}</td>
+							</tr>
+								<tr>
+								<th>Date Fin</th>
+                                <td>{{ reservation.end ? reservation.end|date('Y-m-d') : '' }}</td>
+							</tr>
+						<tr>
+								<th>Comment</th>
+                                <td>{{ reservation.comment }}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th>Nom Medecin</th>
+                                <td>Dr. {{ reservation.users }}-{{ users.prenom }}</td>
+                            </tr>
+                
+                            <tr>
+                                <th>Prix de la consultation</th>
+                                <td>{{ users.prix }}</td>
+                            </tr>
+
+							<tr>
+                                <th>Spécialité</th>
+                                <td>{{ users.speciality }}</td>
+                            </tr> 
+                            <tr>
+                                <th>Adresse de la cabinet</th>
+                                <td>{{ users.adresse }}</td>
+                            </tr>
+							<tr>
+                                <th>Rate</th>
+                                <td>{{ users.rates }}</td>
+                            </tr>
+
+							
+                            
+                        </tbody>
+						 
+			
+
+
+
+                    </table>
+					<div>			
+						<tr> <a  style="margin-bottom: 10px;"class="default-btn me-3" href="{{ path('app_reservation_edit', {'id': reservation.id}) }}">Edit</a></tr>
+		</div>
+		
+		<div>
+			<tr><form  method="post" action="{{ path('app_reservation_delete', {'id': reservation.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+				<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ reservation.id) }}">
+			   <button class="default-btn me-3">Delete</button>
+			</form></tr>
+		</div>
+                
+					
+					
+				</div>
+			</div>
+		</div>
+
+ 
+	      
+       
+		
+       
+
+		
+	
+
+		
+
+
+    </body>
+
+{% endblock %}

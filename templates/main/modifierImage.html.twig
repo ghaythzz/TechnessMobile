@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+		<!-- Start Contact Area -->
+		<div class="contact-area pb-100">
+			<div class="container">
+				<div class="contact-form">
+					<h3>Update your profile</h3>
+
+
+						{{ form_start(form) }}
+
+						{{ form_row(form.image) }}
+
+						{{ form_end(form) }}
+
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- End Contact Area -->
+
+
+		<!-- Start Dark Mode Area -->
+		<div class="dark-mode-btn">
+			<div class="container">
+				<div class="dark-version">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- End Dark Mode Area -->
+
+
+		<!-- Start Copyright Area -->
+		<div class="copy-right-area">
+			<div class="container">
+				<p>© Bexi is Proudly Owned by <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+			</div>
+		</div>
+		<!-- End Copyright Area -->
+
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-s-fill"></i>
+			<i class="ri-arrow-up-s-fill"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+        <!-- Links of JS File -->
+
+    </body>
+
+{% endblock %}

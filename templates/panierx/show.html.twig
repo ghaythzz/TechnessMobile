@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+     <link rel="stylesheet" href="{{ asset('bundles/mercuryseriesflashy/css/flashy.css') }}">
+{% endblock %}
+
+{% block body %}
+ {{ include('@MercurySeriesFlashy/flashy.html.twig') }}
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+           <th>Image</th>
+                <th>ID Panier</th>
+                <th>User</th>
+                <th>Nom Médicament</th>
+                <th>Quantite</th>
+                <th>Prix</th> 
+
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for panierx in panierx %}
+            <tr>
+            {% if panierx.id_medica.image == "" %}
+                <td> pas d'image </td>
+                {% else %}
+                <td><img src="/uploads/medicament/{{ panierx.id_medica.image }}" style="width:100px"></td>
+                {% endif %}
+                <td>{{ panierx.id }}</td>
+                <td>{{ panierx.id_user }}</td>
+                <td>{{ panierx.id_medica.getnom() }}</td>
+                <td>{{ panierx.qte }}</td>
+                <td>{{ panierx.prix }}</td>
+
+             <td>
+           <a href="{{ path('app_panier_delete', {'id': panierx.id}) }}" class="btn btn-sm btn-danger">
+            <i class="fa fa-trash"></i>
+            Supprimer
+               </a>
+               
+               </td>
+          
+              {# {% if not loop.last %}, {% endif %} #}
+
+         {# <td><a href="{{ path('app_panier_delete', {'id': panierx.id}) }}">
+             <button type="button" class="btn btn-danger">Effacer</button>  </td> #}
+                   {% endfor %}
+
+            </tr>
+            
+
+     
+            
+        </tbody> 
+    </table>
+
+{{knp_pagination_render(panierx)}}
+
+
+
+ </div>
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+     <script src="{{ asset('bundles/mercuryseriesflashy/js/flashy.js') }}"></script>
+{% endblock %}

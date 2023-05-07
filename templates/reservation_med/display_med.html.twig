@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+	
+ 
+		
+
+		
+
+		<!-- Start Hospital Details Area -->
+		<div class="hospital-details-area ptb-100">
+			<div class="container">
+				
+				
+
+				<div class="row">
+					
+					<table class="table">
+                        <thead>
+							
+                            <tr>
+                                <th>Id</th>
+                                <th>Start date</th>
+                                <th>End date</th>
+                                <th>Nom du patient</th>
+                               
+                              
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for reservation in reservations %}
+                            <tr>
+                                <td>{{ reservation.id }}</td>
+                                <td>{{ reservation.start ? reservation.start|date('Y-m-d') : '' }}</td>
+                                <td>{{ reservation.end ? reservation.end|date('Y-m-d') : '' }}</td>
+                                <td>{{ reservation.patient }}</td>
+                               
+                              
+                               
+                              
+                                    <td>
+                                   
+                                    <div>
+                                        <form  method="post" action="{{ path('app_reservation_delete', {'id': reservation.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ reservation.id) }}">
+                                           <button class="default-btn me-3">Delete</button>
+                                        </form>
+                                    </div> </td>
+                                <td>
+                                    <form  method="post" action="{{ path('app_ordonnance_new', {'id': reservation.id}) }}">
+                                        <button class="default-btn ">Ordonnance</button>
+                                    </form>
+                                </td>
+                               
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="4">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                
+                   
+					
+				</div>
+			</div>
+		</div>
+		<!-- End Hospital Details Area -->
+
+		<!-- Start Dark Mode Area -->
+		<div class="dark-mode-btn">
+			<div class="container">
+				<div class="dark-version">
+					<label id="switch" class="switch">
+						<input type="checkbox" onchange="toggleTheme()" id="slider">
+						<span class="slider round"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- End Dark Mode Area -->
+ 
+
+
+    </body>
+
+{% endblock %}

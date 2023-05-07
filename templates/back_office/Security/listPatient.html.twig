@@ -1,0 +1,109 @@
+{% extends 'back_office/base.html.twig' %}
+{% block content %}
+
+<!-- begin::Body -->
+<body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+<!-- begin:: card -->
+
+                <!-- begin:: card -->
+                    <!--begin:: Widgets/Applications/User/Profile3-->
+                    {% for u in user %}
+                        {% if u.roles == ["ROLE_PATIENT"] %}
+                    <div style="margin-bottom: 20px" class="kt-portlet">
+
+                      <div class="row" >
+                        <div  class="kt-portlet__body">
+
+                            <div  class="kt-widget kt-widget--user-profile-3">
+                                <div class="kt-widget__top">
+                                    <div class="kt-widget__media kt-hidden-">
+                                        <img src="{{ asset('/uploads/'~u.image) }}" alt="image">
+                                    </div>
+                                    <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+                                        JM
+                                    </div>
+                                    <div class="kt-widget__content">
+
+                                        <div class="kt-widget__head">
+                                            <a href="#" class="kt-widget__username">
+                                                {{u.nom}}-{{u.prenom}}
+                                               
+                                            </a>
+                                            <div class="kt-widget__action">
+                                                     <a href="{{ path('banPatient', {'id': u.id}) }}" style="margin-left: 360px" type="button" class="btn btn-label-danger">Delete</a>&nbsp;
+                                             </div>
+                                        </div>
+                                        <div class="kt-widget__subhead">
+                                            <a href="#"><i class="flaticon2-new-email"></i>{{u.email}}</a>
+                                             <a href="#"><i class="flaticon2-phone"></i>{{u.numero}}</a>
+                                        </div>
+                                        <div class="kt-widget__info">
+                                            <div class="kt-widget__desc">
+                                                {{u.bioDescription}}
+                                            </div>
+                                            <div class="kt-widget__progress">
+                                                <div class="kt-widget__text">
+                                                    Progress
+                                                </div>
+                                                <div class="progress" style="height: 5px;width: 100%;">
+                                                    <div class="progress-bar kt-bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <div class="kt-widget__stats">
+                                                    78%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-widget__bottom">
+                                    <div class="kt-widget__item">
+                                        <div class="kt-widget__icon">
+                                            <i class="flaticon-piggy-bank"></i>
+                                        </div>
+                                        <div class="kt-widget__details">
+                                            <span class="kt-widget__title">Earnings</span>
+                                            <span class="kt-widget__value"><span>$</span>249,500</span>
+                                        </div>
+                                    </div>
+                                    <div class="kt-widget__item">
+                                        <div class="kt-widget__icon">
+                                            <i class="flaticon-confetti"></i>
+                                        </div>
+                                        <div class="kt-widget__details">
+                                            <span class="kt-widget__title">Expenses</span>
+                                            <span class="kt-widget__value"><span>$</span>164,700</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="kt-widget__item">
+                                        <div class="kt-widget__icon">
+                                            <i class="flaticon-chat-1"></i>
+                                        </div>
+                                        <div class="kt-widget__details">
+                                            <span class="kt-widget__title">648 Comments</span>
+                                            <a href="#" class="kt-widget__value kt-font-brand">View</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+
+
+                </div>
+                <!-- end:: card -->
+
+<!-- end::card -->
+</body>
+<!-- end::Body -->
+
+{% endblock   %}

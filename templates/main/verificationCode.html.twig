@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+
+
+
+
+    <!-- Start Page Banner Area -->
+    <div class="page-banner-area bg-22 pt-100">
+        <div class="container">
+            <div class="page-banner-content">
+                <h2>Forget password</h2>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Banner Area -->
+
+    <!-- Start My Account Area -->
+    <div class="my-account-area ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    {{ form_start(emailForm, {'attr': {'id': 'emailForm'}}) }}
+                    <form method="post">
+                        {{ form_widget(emailForm.reset_token ,{'attr':{'class':'form-control','placeholder': "enter verif code"}}) }}
+
+
+                        <div class="d-flex align-items-center">
+                            <button style="margin-top: 20px" type="submit" class="default-btn me-3">
+                                send
+                            </button>
+                            <p style="margin-top: 40px">Don’t have an account? <a href="{{path('register')}}">Register now</a></p>
+                        </div>
+                        {{ form_end(emailForm) }}
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End My Account Area -->
+
+    <!-- Start Footer Area -->
+    <!-- End Footer Area -->
+
+    <!-- Start Copyright Area -->
+
+    <!-- End Copyright Area -->
+
+    <!-- Start Go Top Area -->
+    <div class="go-top">
+        <i class="ri-arrow-up-s-fill"></i>
+        <i class="ri-arrow-up-s-fill"></i>
+    </div>
+    <!-- End Go Top Area -->
+
+
+    </body>
+
+{% endblock %}

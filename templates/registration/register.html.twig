@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+{% block body %}
+
+    <body>
+
+
+
+    <!-- Start register form -->
+    <div class="page-banner-area bg-22 pt-100">
+        <div style="padding-left: 280px" class="container">
+            <div class="my-account-area ptb-100">
+                <div class="container">
+                    <div class="page-banner-content">
+            <div class="row">
+                <div class="col-lg-6" style="width: 500px">
+                        {{ form_start(registrationForm ,{'attr': {'novalidate': 'novalidate'}}) }}
+                        {{ form_label(registrationForm.roles ,'Signup as',{'attr':{'class':'default-btn me-3'}} ) }}
+                        {{ form_widget(registrationForm.roles ,{'attr':{'class':'default-btn me-3'}} ) }}
+                        {{ form_row(registrationForm.nom,{'attr': {'novalidate': 'novalidate'}}) }}
+                        {{ form_row(registrationForm.prenom,{'attr': {'novalidate': 'novalidate'}}) }}
+                        {{ form_row(registrationForm.email ,{'attr': {'novalidate': 'novalidate'}}) }}
+                        {{ form_row(registrationForm.plainPassword.first, { label: 'Password' }) }}
+                        {{ form_row(registrationForm.plainPassword.second, { label: 'Confirm password' }) }}
+                        {{ form_row(registrationForm.agreeTerms) }}
+                        <div class="d-flex align-items-center">
+                            <button type="submit" class="default-btn me-3">
+                                Register now
+                            </button>
+                            {{ form_end(registrationForm) }}
+
+                            <p>Don’t have an account? <a href="{{ path('login') }}">Login</a></p>
+                        </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- End register form -->
+
+
+
+
+    </body>
+
+{% endblock %}

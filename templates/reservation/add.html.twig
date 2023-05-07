@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+
+		
+
+
+		<!-- Start Page Banner Area -->
+		<div class="page-banner-area bg-22 pt-100">
+			<div class="container">
+				<div class="page-banner-content">
+					<h2>Book Online</h2>
+					<ul>
+						<li>
+							<a href="{{path('app_reservation_index')}}">
+								<i class="ri-home-8-line"></i>
+								Display Consultation 
+							</a>
+						</li>
+						<li>
+							<a href="{{path('app_reservation_specialite')}}">
+								<i class="ri-home-8-line"></i>
+								Return 
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Page Banner Area -->
+
+		<!-- Start My Account Area -->
+		<div class="my-account-area ptb-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+							<h2>New Consultation</h2>
+
+
+                         {{ form_start(form) }}
+                       {{ form_row(form.start ) }}
+					   {{ form_row(form.end ) }}
+					   {{ form_row(form.comment ) }}
+   
+    
+                        {{ form_end(form) }}
+						
+						
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End My Account Area -->
+
+
+		
+
+
+    </body>
+
+{% endblock %}
+

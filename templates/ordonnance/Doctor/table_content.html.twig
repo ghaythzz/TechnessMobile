@@ -1,0 +1,34 @@
+<table class="table table-bordered table-hover" style="border-radius: 12px; overflow: hidden;">
+    <thead style="background-color: #0057b8; color: white;">
+    <tr>
+        <th scope="col">NomPatient</th>
+        <th scope="col">Date</th>
+        <th scope="col">Commentaire</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for ordonnance in ordonnances %}
+        <tr>
+            <td>
+                {{ ordonnance.patient.nom }}
+            </td>
+            <td>
+                {{ ordonnance.date ? ordonnance.date|date('Y-m-d') : '' }}
+            </td>
+            <td>
+                {{ ordonnance.commentaire }}
+            </td>
+            <td>
+                <a href="{{ path('app_ordonnance_edit', {'id': ordonnance.id}) }}" class="me-3">
+                    <i class="ri-edit-2-fill"></i>
+                </a>
+                <a href="{{ path('app_ordonnance_delete', {'id': ordonnance.id}) }}"onclick="return confirm('Do you want to delete this item?')" class="remove">
+                    <i class="ri-delete-bin-7-line"></i>
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

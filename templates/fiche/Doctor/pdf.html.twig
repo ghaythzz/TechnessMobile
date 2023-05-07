@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mon PDF personnalisé</title>
+</head>
+<body>
+        <h5 style="text-align: left">Dr.{{ fiche.doctor.nom|capitalize }} {{ fiche.doctor.prenom|capitalize }}</h5>
+        <h5 style="margin-left : 35px;">{{ fiche.doctor.speciality|capitalize }}</h5>
+<h1 style="text-align: center; font-size: 30px">Fiche Patient</h1>
+<h4 style="text-align: center;">__________________________________________CONFIDENTIEL__________________________________________</h4>
+        <div style="margin: 0 auto;display: block;width: 500px;">
+            <table>
+                <tr>
+                    <td style="text-decoration: underline;">Prénom et Nom:</td>
+                    <td>{{ fiche.patient.nom }} {{ fiche.patient.prenom }}</td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">Address:</td>
+                    <td>{% if fiche.patient.adresse %}
+                        {{ fiche.patient.adresse }}
+                        {% else %}
+                            ----------
+                        {% endif %}
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">Date de Naissance:</td>
+                    <td>{% if fiche.dateNaissance %}
+                            {{ fiche.dateNaissance|date('d-m-Y') }}
+                        {% else %}
+                            ----------
+                        {% endif %}</td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">Téléphone:</td>
+                    <td>{% if fiche.tel %}
+                            {{ fiche.tel }}
+                        {% else %}
+                            ----------
+                        {% endif %}
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">État clinique:</td>
+                    <td>{% if fiche.etatClinique %}
+                            {{ fiche.etatClinique }}
+                        {% else %}
+                            ----------
+                        {% endif %}
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">Sex:</td>
+                    <td>{% if fiche.genre %}
+                            {{ fiche.genre }}
+                        {% else %}
+                            ----------
+                        {% endif %}</td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="text-decoration: underline;">Type d'assurance:</td>
+                    <td>{% if fiche.typeAssurance %}
+                            {{ fiche.typeAssurance }}
+                        {% else %}
+                            ----------
+                        {% endif %}
+                    </td>
+                </tr>
+            </table>
+            <h5 style="font-size: 18px; font-weight: bold; color: black; text-decoration: underline;">Rendez-vous</h5>
+            {% for reservation in reservations %}
+                <li>
+                    {{ reservation.start|date('d-m-Y') }}
+                    {% if reservation.ordonnance %}
+                        <span>      Nombre medicaments données: {{ reservation.ordonnance.ordonnanceMedicaments|length }}</span>
+                    {% else %}
+                        <span>      Nombre medicaments données: 0</span>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            <h5 style="font-size: 18px; font-weight: bold; color: black; text-decoration: underline;">Ordonnance</h5>
+            {% set num = 0 %}
+            {% for ordonnance in ordonnances %}
+                {% set num = num + 1 %}
+
+            <h2>Ordonnance n°{{ num }}</h2>
+            <div class="accordion frequently-asked" id="accordionExample">
+                {% for med in ordonnance.ordonnanceMedicaments %}
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne{{ med.id }}">
+
+                                {{ med.medicament.nom|capitalize }} :
+                        </h3>
+                            <div class="accordion-body">
+                                <div class="hospital-content">
+                                    <ul>
+                                        <li>
+                                            <span>Nombre des Dose:  {% if med.dosage %}
+                                                                            {{ med.dosage }}
+                                                                    {% else %}
+                                                                            ----------
+                                                                    {% endif %} et Durée: {{ med.duration }} semaine(s) </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>
+                {% endfor %}
+            </div>
+                <div class="gap-mb-50"></div>
+            {% endfor %}
+        </div>
+        <div style="border: 1px solid black; padding: 10px; height: 100px">
+            Signature :
+        </div>
+
+</body>
+</html>

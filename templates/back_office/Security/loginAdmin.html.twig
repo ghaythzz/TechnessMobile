@@ -1,0 +1,61 @@
+{% extends 'back_office/homeAdmin.html.twig' %}
+{% block content %}
+	    <!--begin::Signin-->
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <!-- begin:: Page -->
+    <div class="kt-grid kt-grid--ver kt-grid--root">
+        <div class="kt-grid kt-grid--hor kt-grid--root  kt-login kt-login--v5 kt-login--signin" id="kt_login">
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--desktop kt-grid--ver-desktop kt-grid--hor-tablet-and-mobile" style="background-image: url(./assets/media//bg/bg-3.jpg);">
+
+                <div class="kt-login__right">
+                    <div class="kt-login__wrapper">
+                        <div class="kt-login__signin">
+                            <div class="kt-login__head">
+                                <h3 class="kt-login__title">Login To Your Account</h3>
+                            </div>
+                            <div class="kt-login__form">
+                                <form class="kt-form" action="">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Username" name="username" autocomplete="off">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control form-control-last" type="Password" placeholder="Password" name="password">
+                                    </div>
+                                    <div class="row kt-login__extra">
+                                        <div class="col kt-align-left">
+                                            <label class="kt-checkbox">
+                                                <input type="checkbox" name="remember"> Remember me
+                                                <span></span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="kt-login__actions">
+                                        <button id="kt_login_signin_submit" class="btn btn-brand btn-pill btn-elevate">Sign In</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- end:: Page -->
+
+
+
+    </body>
+
+								<!--end::Signin-->
+
+						<!--end::Body-->
+
+					<!--end::Content-->
+
+		<!-- end:: Page -->
+	<!-- end::Body -->
+
+{% endblock %}

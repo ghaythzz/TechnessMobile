@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Nom ph</th>
+                  
+
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for medicament in medicaments %}
+            <tr>
+                <td>{{ medicament.Nom }}</td>
+                <td>{{ medicament.Type }}</td>
+                <td>{{ medicament.Prix }}</td>
+                {% if medicament.image == "" %}
+                <td> pas d'image </td>
+                {% else %}
+                <td><img src="/uploads/medicament/{{ medicament.image }}" style="width:100px"></td>
+                {% endif %}
+                <td>
+
+                
+               {% for pharmacy in medicament.id_pharmacie %}
+           <td> {{ pharmacy.nom }}  </td>
+
+
+                 </td>
+
+               
+
+                 
+
+          
+              {# {% if not loop.last %}, {% endif %} #}
+             {% endfor %}
+
+              <td>
+
+                 <button type="button" class="btn btn-primary">Ajouter</button>
+
+                <a href="{{ path('app_panierx', {'id': medicament.id}) }}"> </a>
+
+                </td>
+
+
+                   {% endfor %}
+
+            </tr>
+
+     
+            
+        </tbody> 
+    </table>
+
+   
+
+ </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'back_office/base.html.twig' %}
+{% block title %}Evenement{% endblock %}
+
+{% block body %}
+    <body class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--fixed kt-subheader--enabled kt-subheader--solid kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <h1>Evenement details</h1>
+
+    <table class="table" style="margin-left:300px">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ evenement.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ evenement.nom }}</td>
+            </tr>
+            <tr>
+                <th>Capacite</th>
+                <td>{{ evenement.capacite }}</td>
+            </tr>
+            <tr>
+                <th>Local</th>
+                <td>{{ evenement.local }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ evenement.date ? evenement.date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ evenement.prix }}</td>
+            </tr>
+             <tr>
+                <th>type</th>
+                <td>{{ evenement.type }}</td>
+            </tr>
+             <tr>
+                <th>description</th>
+                <td>{{ evenement.description }}</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    
+
+    
+    <div class="d-grid gap-2 d-md-block">
+    <button type="button" class="btn btn-outline-info" style="float: right;"><a href="{{ path('app_evenement_index') }}">back to list</a> </button>
+    <button type="button" class="btn btn-outline-warning" style="float: right;"><a href="{{ path('app_evenement_edit', {'id': evenement.id}) }}">edit</a> </button>
+
+  
+    </div>
+    </body>
+{% endblock %}

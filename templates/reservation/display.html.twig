@@ -1,0 +1,82 @@
+{% extends 'nav_con.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+    <body>
+	
+ 
+		
+
+       
+
+		<!-- Start Hospital Details Area -->
+		<div class="hospital-details-area ptb-100">
+
+            
+            <a href="{{ path('app_reservation_index_sorted') }}" class="cart">
+                 <img style="max-width: 3%; margin-left: 160px; margin-bottom: 60px;" src="{{ asset('frontOffice/assets/images/svg-icon/Sort.JPG') }}" alt="Image">
+       
+            </a>
+            
+         
+			<div class="container">
+				
+
+				<div class="row">
+					
+					<table class="table">
+                        <thead>
+							
+                            <tr>
+                               
+                                <th>Date Debut</th>
+                                <th>Date Fin</th>
+                                <th>Comment</th>
+                                <th>Med</th>
+                               
+                              
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for reservation in reservations %}
+                            <tr>
+                                
+                                <td>{{ reservation.start ? reservation.start|date('Y-m-d') : '' }}</td>
+                                <td>{{ reservation.end ? reservation.end|date('Y-m-d') : '' }}</td>
+                                <td>{{ reservation.Comment }}</td>
+                                <td>{{ reservation.users }}</td>
+                               
+                              
+                               
+                                <td>
+                                    <a href="{{ path('app_reservation_show', {'id': reservation.id}) }}" class="default-btn">Show</a>
+                                    <a href="{{ path('app_reservation_edit', {'id': reservation.id}) }}"class="default-btn">Edit</a>
+                                    <a href="{{ path('app_reservation_calendaar') }}"class="default-btn">Calendar</a>
+                                </td>
+                               
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="4">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        
+                        </tbody>
+                    </table>
+                   
+                   
+					
+				</div>
+			</div>
+		</div>
+		<!-- End Hospital Details Area -->
+
+	
+
+
+    </body>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <div class="find-doctor-area pt-50 pe-xl-5 ps-xl-5 pb-150">
+        <div class="container-fluid">
+            <div class="find-doctor-title">
+                <h3>Update fiche</h3>
+                <p>Update fiche for patient <b>{{ fiche.patient.nom|capitalize }}&nbsp;{{ fiche.patient.prenom }}</b></p>
+            </div>
+            {{ form_start(form, {'attr':{'class':'find-doctors','style':'padding: 20px 20px; border-radius: 10px;',novalidate: 'novalidate'}}) }}
+            <div class="row">
+                <div class="col-lg-12">
+                    <label>
+                        {{ form_label(form.tel) }}
+                    </label>
+                    <div class="form-group">
+                        {{ form_widget(form.tel) }}
+                        {{ form_errors(form.tel) }}
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <label>{{ form_label(form.date_naissance) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.date_naissance) }}
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>{{ form_label(form.genre) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.genre) }}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <label>{{ form_label(form.etatClinique) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.etatClinique) }}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <label>{{ form_label(form.typeAssurance) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.typeAssurance) }}
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <a href="{{ path('app_fiche_index',{'id': fiche.patient.id}) }}" type="button" class="btn btn-soft-success">Cancel</a>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}

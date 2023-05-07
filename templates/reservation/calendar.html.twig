@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div id="calendrier"></div>
+{% endblock %}
+
+
+ 
+{% block javascripts %}
+
+    <script>
+window.onload = () => {
+
+let calendarElt = document.querySelector("#calendrier")
+let calendar = new FullCalendar.Calendar(calendarElt , {
+    initialViem: 'timeGridWeek',
+  
+    
+    headerToolbar: {
+        start: 'title',
+        centre: 'prev,next today',
+        end: 'timeGridWeek,dayGridMonth',
+    } ,
+    events: {{data|raw}} 
+
+
+
+})
+
+calendar.render()
+
+}
+
+
+    </script>
+{% endblock %}
+

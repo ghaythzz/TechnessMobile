@@ -1,0 +1,523 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+	<!doctype html>
+	<html lang="zxx">
+	<body>
+	<div class="hero-area">
+		<div class="swiper hero-slide">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide bg-1">
+					<div class="container">
+						<div class="hero-content">
+							<h1 style="margin-bottom: 140px">Our strength is your well-being</h1>
+							<div class="hero-btn">
+								<a href="about-us.html" class="default-btn">About Us</a>
+								<a href="contact-us.html" class="default-btn active">Contact us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide bg-2">
+					<div class="container">
+						<div class="hero-content width-two">
+							<h1>We want to heal the patient with services</h1>
+							<p>Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+							<div class="hero-btn">
+								<a href="about-us.html" class="default-btn">Learn more</a>
+								<a href="contact-us.html" class="default-btn active">Contact us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide bg-3">
+					<div class="container">
+						<div class="hero-content width-three">
+							<h1>Need your expertise we are ready</h1>
+							<p>Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+							<div class="hero-btn">
+								<a href="about-us.html" class="default-btn">Learn more</a>
+								<a href="contact-us.html" class="default-btn active">Contact us</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="pagination-btn">
+			<div class="swiper-pagination"></div>
+		</div>
+
+		<ul class="socila-link">
+			<li>
+				<a href="https://www.facebook.com/" target="_blank">
+					<img src="{{ asset('frontOffice/assets/images/svg-icon/facebook.svg') }}" alt="Image">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.twitter.com/" target="_blank">
+					<img src="{{ asset('frontOffice/assets/images/svg-icon/twitter.svg') }}" alt="Image">
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/" target="_blank">
+					<img src="{{ asset('frontOffice/assets/images/svg-icon/linkedin.svg') }}" alt="Image">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- End Hero Area -->
+
+
+
+	<!-- Start Urgent Area -->
+	<div class="urgent-area ptb-100">
+		<div class="container">
+			<div class="section-title services-title">
+				<span class="top-title">URGENT SERVICES</span>
+				<h2>See our hospital's emergency care services</h2>
+			</div>
+
+			<div class="urgent-slide owl-carousel owl-theme">
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Chest Pain</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-2.svg" alt="Image">
+					</div>
+					<h3>Minor Injury</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Vaccinations</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-4.svg" alt="Image">
+					</div>
+					<h3>Minor Burns</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Chest Pain</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-2.svg" alt="Image">
+					</div>
+					<h3>Minor Injury</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Vaccinations</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-4.svg" alt="Image">
+					</div>
+					<h3>Minor Burns</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Chest Pain</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-2.svg" alt="Image">
+					</div>
+					<h3>Minor Injury</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-3.svg" alt="Image">
+					</div>
+					<h3>Vaccinations</h3>
+				</div>
+				<div class="single-urgent">
+					<div class="icon">
+						<img src="assets/images/icon/icon-4.svg" alt="Image">
+					</div>
+					<h3>Minor Burns</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- End Urgent Area -->
+
+	<!-- Start Appointment Area -->
+	<div class="appointment-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 p-0">
+					<div class="appointment-img">
+						<h3>Help us get the treatment you need</h3>
+					</div>
+				</div>
+				<div class="col-lg-7 p-0">
+					<div class="appointment-form">
+						<h2>Make An Appointment</h2>
+
+						<form>
+							<div class="row">
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>NAME</label>
+										<input type="text" class="form-control" placeholder="Craig McNutt">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>CHOOSE DOCTOR NAME</label>
+										<select class="form-select form-control" aria-label="Default select example">
+											<option selected>Barbara Ybarra</option>
+											<option value="1">Ybarra Daek</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>EMAIL</label>
+										<input type="email" class="form-control" placeholder="bexi@gmail.com">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>SELECT DEPARTMENT</label>
+										<select class="form-select form-control" aria-label="Default select example">
+											<option selected>Cardiologists</option>
+											<option value="1">Medicine</option>
+											<option value="2">Cardiology</option>
+											<option value="3">Surgery</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>PHONE</label>
+										<input type="text" class="form-control" placeholder="***********">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="form-group">
+										<label>DATE</label>
+										<input type="date" class="form-control">
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<div class="form-group">
+										<label>APPOINTMENT NOTE</label>
+										<textarea class="form-control" cols="30" rows="6" placeholder="write your note here..."></textarea>
+									</div>
+								</div>
+
+								<div class="col-lg-12">
+									<button type="submit" class="default-btn active">
+										Make an appointment
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Appointment Area -->
+
+	<!-- Start Solution Area -->
+	<div class="solution-area bg-color-f8f9fa pt-100 pb-70">
+		<div class="container">
+			<div class="section-title solution-title">
+				<span class="top-title">SOLUTION</span>
+				<h2>Some easy steps to get your proper solution</h2>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-solution">
+						<div class="icon">
+							<span>1</span>
+							<i class="flaticon-search"></i>
+						</div>
+						<h3>Search doctor</h3>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-solution">
+						<div class="icon">
+							<span>2</span>
+							<i class="flaticon-search-1"></i>
+						</div>
+						<h3>Check doctor profile</h3>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-solution">
+						<div class="icon">
+							<span>3</span>
+							<i class="flaticon-calendar"></i>
+						</div>
+						<h3>Doctor appointment</h3>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-solution">
+						<div class="icon">
+							<span>4</span>
+							<i class="flaticon-think"></i>
+						</div>
+						<h3>Get first solution</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Solution Area -->
+
+
+	<!-- Start Knock us Area -->
+	<div class="knock-us-area bg-color-0057b8 ptb-100">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<div class="knock-us-content">
+						<h3>Knock us out today to get medical services</h3>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="knock-us-btn">
+						<a href="appointment.html" class="default-btn active">Book an appointment</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Knock us Area -->
+
+	<!-- Start Dark Mode Area -->
+	<div class="dark-mode-btn">
+		<div class="container">
+			<div class="dark-version">
+				<label id="switch" class="switch">
+					<input type="checkbox" onchange="toggleTheme()" id="slider">
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<!-- End Dark Mode Area -->
+
+	<!-- Start Dark Mode Area -->
+	<div class="dark-mode-btn">
+		<div class="container">
+			<div class="dark-version">
+				<label id="switch" class="switch">
+					<input type="checkbox" onchange="toggleTheme()" id="slider">
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+	</div>
+	<!-- End Dark Mode Area -->
+
+	<!-- Start Footer Area -->
+	<div class="footer-area bg-color-f1f5f8 pt-100 pb-70">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-footer-widget">
+						<a href="index.html" class="logo">
+							<img src="{{ asset('frontOffice/assets/images/DocNet.png') }}" style="max-width: 40%" class="main-logo" alt="logo">
+						</a>
+						<p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie.</p>
+						<h4>177 Devon Lane Miami, MK 3355</h4>
+						<ul class="info">
+							<li>
+								<span>EMAIL US:</span>
+								<a href="https://templates.envytheme.com/cdn-cgi/l/email-protection#224b4c444d6240475a4b0c414d4f"><span class="__cf_email__" data-cfemail="bfd6d1d9d0ffdddac7d691dcd0d2">[email&#160;protected]</span></a>
+							</li>
+							<li>
+								<span>CALL US:</span>
+								<a href="tel:1-885-665-2022">1-885-665-2022</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-footer-widget">
+						<h3>Departments</h3>
+
+						<ul class="import-link">
+							<li>
+								<a href="department.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Emergency Departments
+								</a>
+							</li>
+							<li>
+								<a href="department-orthopedics.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Orthopedics
+								</a>
+							</li>
+							<li>
+								<a href="department.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Neurosciences
+								</a>
+							</li>
+							<li>
+								<a href="department.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Gastroenterology
+								</a>
+							</li>
+							<li>
+								<a href="department.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Bariatric Surgery
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-footer-widget">
+						<h3>Helpful Links</h3>
+
+						<ul class="import-link">
+							<li>
+								<a href="find-a-doctor.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Find a Doctor
+								</a>
+							</li>
+							<li>
+								<a href="hospital.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Find a Hospital
+								</a>
+							</li>
+							<li>
+								<a href="products.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Buy Medicine
+								</a>
+							</li>
+							<li>
+								<a href="terms-conditions.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Terms of Use
+								</a>
+							</li>
+							<li>
+								<a href="privacy-policy.html">
+									<i class="ri-arrow-right-s-line"></i>
+									Privacy Policy
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6">
+					<div class="single-footer-widget">
+						<h3>Subscribe Our Newsletter</h3>
+
+						<form class="newsletter-form" data-toggle="validator">
+							<input type="email" class="form-control" placeholder="Email address" name="EMAIL" required autocomplete="off">
+
+							<button class="default-btn" type="submit">
+								Submit now
+							</button>
+
+							<div id="validator-newsletter" class="form-result"></div>
+						</form>
+
+						<ul class="socila-link">
+							<li>
+								<a href="https://www.facebook.com/" target="_blank">
+									<img src="{{ asset('frontOffice/assets/images/svg-icon/facebook.svg') }}" alt="Image">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/" target="_blank">
+									<img src="{{ asset('frontOffice/assets/images/svg-icon/twitter.svg') }}" alt="Image">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/" target="_blank">
+									<img src="{{ asset('frontOffice/assets/images/svg-icon/linkedin.svg') }}" alt="Image">
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/" target="_blank">
+									<img src="{{ asset('frontOffice/assets/images/svg-icon/instagram.svg') }}" alt="Image">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Area -->
+
+	<!-- Start Copyright Area -->
+	<div class="copy-right-area">
+		<div class="container">
+			<p>© DocNet is Proudly Owned by <a href="https://envytheme.com/" target="_blank">TechNess</a></p>
+		</div>
+	</div>
+	<!-- End Copyright Area -->
+
+	<!-- Start Go Top Area -->
+	<div class="go-top">
+		<i class="ri-arrow-up-s-fill"></i>
+		<i class="ri-arrow-up-s-fill"></i>
+	</div>
+	<!-- End Go Top Area -->
+
+
+	</body>
+
+	<!-- Mirrored from templates.envytheme.com/bexi/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Feb 2023 14:05:58 GMT -->
+	</html>
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/63e6844b474251287912a483/1gou79i31';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+	</script>
+	<!--End of Tawk.to Script-->
+{% endblock %}

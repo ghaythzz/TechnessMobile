@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+
+
+	<body>
+
+	</div>
+	<!-- Start Doctor Details Area -->
+	<div class="doctor-details-area ptb-100">
+		<div class="container">
+			<div class="doctor-details-content">
+				<div style=" padding-top: 35px;margin-left: 1100px">
+					<a class="default-btn active" href="{{path('modifierProfile',{'id':app.user.id})}}">Setting</a>
+				</div>
+				<div class="doctor-details-wrap">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<div class="doctor-img">
+								<img src="{{ asset('/uploads/'~app.user.image) }}" alt="Image">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="doctor-content">
+								<h3>{{ app.user.nom  }}-{{ app.user.prenom }}</h3>
+								<ul>
+									<li>
+										<span>Email:</span>
+										{{ app.user.Email }}
+									</li>
+									<li>
+										<span>Address:</span>
+										{{ app.user.adresse }}
+									</li>
+									<li>
+										<span>Phone:</span>
+										{{ app.user.numero }}
+									</li>
+									<li>
+										Patient Experience Rating
+										<p>
+											<i class="ri-star-s-fill"></i>
+											<i class="ri-star-s-fill"></i>
+											<i class="ri-star-s-fill"></i>
+											<i class="ri-star-s-fill"></i>
+											<i class="ri-star-s-fill"></i>
+											5 Stars
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="pt-100">
+				<div class="row">
+					<div class="col-lg-8">
+						
+
+					<div class="col-lg-8">
+						<div class="sidebar-wrap ml-15">
+							<div class="sidebar-widget appointment-time">
+								
+							</div>
+
+							<div class="sidebar-widget review">
+								<h3>Write A Review</h3>
+
+								<div class="review-wrap">
+									<div class="doctor-info d-flex align-items-center">
+										<img src="../../../doc123/templates.envytheme.com/bexi/default/assets/images/team/team-14.jpg" alt="Image">
+										<div class="info ms-3">
+											<h4>Glenn Arredondo</h4>
+											<span>Family Physicians</span>
+										</div>
+									</div>
+
+									<form>
+
+										
+										<p>
+											<i class="ri-star-fill"></i>
+											<i style="color:rgb(231, 228, 102)" , class="ri-star-fill"></i>
+											
+											<i class="ri-star-fill"></i>
+											<i class="ri-star-fill"></i>
+											<i class="ri-star-fill"></i>
+											<i class="ri-star-fill"></i>
+											Overall provider rating
+										</p>
+
+										<div class="form-group">
+											<textarea class="form-control text" cols="30" rows="6" placeholder="How was your visit with a doctor?"></textarea>
+										</div>
+
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="Email address">
+										</div>
+
+										<div class="form-group mb-0">
+											<button type="submit" class="default-btn active">
+												Submit review
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Doctor Details Area -->
+
+	
+	
+
+
+	</body>
+
+{% endblock %}

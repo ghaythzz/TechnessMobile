@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block body %}
+    <div class="find-doctor-area pt-50 pe-xl-5 ps-xl-5 pb-150">
+        <div class="container-fluid">
+            <div class="find-doctor-title">
+                <h3>Create ordonnance</h3>
+                <p>Create ordonnance for patient <b>{{ patient.nom|capitalize }}&nbsp;{{ patient.prenom }}</b></p>
+            </div>
+            {{ form_start(form, {'attr':{'class':'find-doctors','style':'padding: 20px 20px; border-radius: 10px;',novalidate: 'novalidate'}}) }}
+            <div class="row">
+                <div class="col-lg-6">
+                    <label>
+                        {{ form_label(form.nomMedecin) }}
+                    </label>
+                    <div class="form-group">
+                        {{ form_widget(form.nomMedecin) }}
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <label>{{ form_label(form.nomPatient) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.nomPatient) }}
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <label>{{ form_label(form.commentaire) }}</label>
+                    <div class="form-group">
+                        {{ form_widget(form.commentaire) }}
+                    </div>
+                </div>
+
+                <div id="repeater" class="col-lg-12 row mb-3">
+                    <div class="mb-3 col-md-12" data-repeater-list="ordonnance[ordonnanceMedicaments]">
+                        {% for ordMed in form.ordonnanceMedicaments %}
+                            <div data-repeater-item class="row mb-2">
+                                <div class="col-4">
+                                    {{ form_widget(ordMed.medicament) }}
+                                </div>
+                                <div class="col-md-3">
+                                    {{ form_widget(ordMed.dosage) }}
+                                    {{ form_errors(ordMed.dosage) }}
+                                </div>
+                                <div class="col-md-3">
+                                    {{ form_widget(ordMed.duration) }}
+                                    {{ form_errors(ordMed.duration) }}
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="button" data-repeater-delete class="btn btn-icon btn-danger" style="top: 8px; position: relative;">
+                                        <i class="bx bx-x "></i>delete
+                                    </button>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button type="button" data-repeater-create class="btn btn-secondary col-md-1"><i class="ri-edit-box-line align-bottom"></i> Add</button>
+                </div>
+                <div class="col-lg-12">
+                    <div class="hstack gap-2 justify-content-end">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                        <a href="{{ path('app_ordonnance_index') }}" type="button" class="btn btn-soft-success">Cancel</a>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('frontOffice/assets/js/custom/jquery.repeater.min.js') }}"></script>
+    <script>
+        $('#repeater').repeater({
+            initEmpty: false,
+            show: function() {
+                $(this).slideDown(function() {
+                });
+            },
+            hide: function(deleteElement) {
+                $(this).slideUp(deleteElement)
+            }
+        })
+    </script>
+{% endblock %}

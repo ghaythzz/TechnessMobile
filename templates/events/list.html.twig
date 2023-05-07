@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+ 
+ {% block body %}
+
+{% block content %}
+<main>
+			<div class="album py-5 bg-light">
+				<div class="container">
+					
+
+                         	
+	                    <div class="row"> 
+						{% for event in evenements %} 
+ 	                        <div style="margin-left:250px;width:800px"class="card mb-4 shadow-sm">		
+		  
+          
+		                             <img src=	"{{ asset('/uploads/' ~ event.image) }}">
+
+		                        <div class="card-body">
+ 
+                                    	<p class="card-text">{{event.nom}}</p>
+			                        	<small class="text-muted">{{event.capacite}}</small>
+
+                                	 <div class="d-flex justify-content-between align-items-center">
+                                           <div class="btn-group">
+                                           
+										     <button type="button" class="btn btn-sm btn-outline-secondary">
+							                  <a href="{{ path('app_evenement_show_front', {id :event.id()}) }}">Voir Détails</a>
+								         	</button>
+				                         
+										    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="msg()">
+							                <a href="{{ path('app_participation_new', {event: event.id()}) }}">Participer</a>
+						        			</button>
+                                          
+										   <button type="button" class="btn btn-sm btn-outline-success">
+						                 	<a href="{{ path('app_evenement_like', { id: event.id()}) }}">
+													
+													{{ event.likes|length }}
+								     	   </button> 
+										     </div>
+			                         </div>
+                                </div>
+
+                            </div>
+						                   {% endfor %}
+
+       
+		          
+
+		    </div>
+			</div>
+					    </div>
+
+
+		</main>
+		
+			
+			
+		{% endblock %}
+		{% block javascript %}
+			{{ parent() }}
+			
+			<script src="{{ asset('backOffice/js/custom/jquery.dataTables.min.js') }}"></script>
+			<script src="{{ asset('backOffice/js/custom/dataTables.bootstrap5.min.js') }}"></script>
+			<script src="{{ asset('backOffice/js/custom/dataTables.bootstrap5.min.js') }}"></script>
+			<script src="{{ asset('error/error.js') }}"></script>
+			<script></script>
+			<script>
+				$('#ordonance-list').DataTable();
+			</script>
+		{% endblock %}
+
+		{% endblock %}
+ 
