@@ -49,6 +49,15 @@ public class ProfileForm extends BaseForm {
         Button btnghayth = new Button("Reservation Space");
             btnghayth.addActionListener(e-> new gui.HomeForm(this).show());
           add(btnghayth);
+        Button btnOrdonnance = new Button("Liste de Vos Ordonnance");
+            btnOrdonnance.addActionListener(e-> new gui.ListOrdonnanceForm(this).show());
+          add(btnOrdonnance);
+           Button btnListePatient = new Button("Liste des vos patients");
+            btnListePatient.addActionListener(e-> new gui.ListPatientForm(this).show());
+          add(btnListePatient);
+           Button btnAjoutOrdonnance = new Button("Ajouter Ordonnance");
+            btnAjoutOrdonnance.addActionListener(e-> new gui.ListReservationForm(this).show());
+          add(btnAjoutOrdonnance);
             Button signIn = new Button("Logout");
         
        signIn.addActionListener(e -> new SignInForm().show());

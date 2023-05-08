@@ -15,7 +15,7 @@ import com.codename1.io.NetworkEvent;
 import com.codename1.io.NetworkManager;
 import com.codename1.l10n.SimpleDateFormat;
 import com.codename1.ui.events.ActionListener;
-import entity.Reservation;
+import com.mycomany.entities.Reservation;
 import java.util.Date;
 import java.util.ArrayList;
 import java.util.List;

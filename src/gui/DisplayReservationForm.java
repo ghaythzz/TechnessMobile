@@ -18,7 +18,7 @@ import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
-import entity.Reservation;
+import com.mycomany.entities.Reservation;
 import com.mycompany.myapp.services.ServiceReservation;
 
 import java.util.ArrayList;

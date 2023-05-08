@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package entity;
+package com.mycomany.entities;
 
 /*
  * To change this template, choose Tools | Templates
@@ -20,7 +20,8 @@ import java.util.List;
 public class Reservation {
 
     private int id;
-  
+    private int users_id;
+    private int patient_id;
     private Date start;
     private Date end;
     private String comment;
@@ -84,6 +85,31 @@ public class Reservation {
     public String toString() {
         return "|comment=" + comment+ " ||end=" + end +  " ||start=" + start +"|";
     }
+
+    public int getUsers_id() {
+        return users_id;
+    }
+
+    public void setUsers_id(int users_id) {
+        this.users_id = users_id;
+    }
+
+    public int getPatient_id() {
+        return patient_id;
+    }
+
+    public void setPatient_id(int patient_id) {
+        this.patient_id = patient_id;
+    }
+
+    public Date getStart() {
+        return start;
+    }
+
+    public void setStart(Date start) {
+        this.start = start;
+    }
+    
 
 }
 

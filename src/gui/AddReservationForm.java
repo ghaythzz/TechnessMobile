@@ -13,7 +13,7 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.spinner.Picker;
-import entity.Reservation;
+import com.mycomany.entities.Reservation;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import com.mycompany.myapp.services.ServiceReservation;
