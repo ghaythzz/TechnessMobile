@@ -39,9 +39,11 @@ class Ordonnance
     private ?string $commentaire = null;
 
     #[ORM\ManyToOne(inversedBy: 'ordonnances')]
+    #[Groups("ordonnances")]
     private ?User $doctor = null;
 
     #[ORM\ManyToOne(inversedBy: 'ordPatients')]
+    #[Groups("ordonnances")]
     private ?User $patient = null;
 
     #[ORM\OneToMany(mappedBy: 'ordonnance', targetEntity: OrdonnanceMedicament::class, cascade: ['persist','remove'])]
@@ -117,6 +119,11 @@ class Ordonnance
         return $this->doctor;
     }
 
+    public function getDoctorId(): ?int
+    {
+        return $this->doctor ? $this->doctor->getId() : null;
+    }
+
     public function setDoctor(?User $doctor): self
     {
         $this->doctor = $doctor;
@@ -128,6 +135,12 @@ class Ordonnance
     {
         return $this->patient;
     }
+
+    public function getPatientId(): ?int
+    {
+        return $this->patient ? $this->patient->getId() : null;
+    }
+
 
     public function setPatient(?User $patient): self
     {

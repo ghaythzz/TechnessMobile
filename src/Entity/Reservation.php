@@ -17,7 +17,7 @@ class Reservation
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(nullable: true)]
-    #[Groups("reservations")]
+    #[Groups(["reservations", "resers"])]
     private ?int $id = null;
 
 
@@ -26,17 +26,18 @@ class Reservation
 
     #[ORM\ManyToOne(inversedBy: 'reservations')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups("reservations")]
+    #[Groups(["reservations", "resers"])]
     private ?User $users = null;
 
     #[ORM\ManyToOne(inversedBy: 'reservpat')]
-    #[ORM\JoinColumn(nullable: false)]  
-    #[Groups("reservations")]
+    #[ORM\JoinColumn(nullable: false)]
+    #[Groups(["reservations", "resers"])]
+
     private ?User $patient = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable: true)]
-    #[Groups("reservations")]
 
+    #[Groups(["reservations", "resers"])]
     private ?\DateTimeInterface $start = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable: true)]
@@ -48,6 +49,11 @@ class Reservation
  
     private ?string $Comment = null;
 
+    #[ORM\ManyToOne(inversedBy: 'reservations')]
+    private ?Fiche $Fiche = null;
+
+    #[ORM\OneToOne(mappedBy: 'reservations', cascade: ['persist', 'remove'])]
+    private ?Ordonnance $ordonnance = null;
 
     public function getId(): ?int
     {
@@ -124,5 +130,38 @@ class Reservation
         return $this;
     }
 
+    public function getOrdonnance(): ?Ordonnance
+    {
+        return $this->ordonnance;
+    }
+
+    public function setOrdonnance(?Ordonnance $ordonnance): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($ordonnance === null && $this->ordonnance !== null) {
+            $this->ordonnance->setReservations(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($ordonnance !== null && $ordonnance->getReservations() !== $this) {
+            $ordonnance->setReservations($this);
+        }
+
+        $this->ordonnance = $ordonnance;
+
+        return $this;
+    }
+
+    public function getFiche(): ?Fiche
+    {
+        return $this->Fiche;
+    }
+
+    public function setFiche(?Fiche $Fiche): self
+    {
+        $this->Fiche = $Fiche;
+
+        return $this;
+    }
     
 }

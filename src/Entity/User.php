@@ -8,7 +8,8 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints\File;
+ use Symfony\Component\Serializer\Annotation\Groups;
+ use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -24,9 +25,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(["resers", "users" , "ordonnances","user"])]
+
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
+    #[Groups("user")]
     private ?string $email = null;
 
     #[ORM\Column]
@@ -39,9 +43,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("users")]
     private ?string $nom = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups("users")]
     private ?string $prenom = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -58,7 +64,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
-    
+
 
 
     /**
@@ -94,9 +100,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $baned = null;
 
     #[ORM\OneToMany(mappedBy: 'doctor', targetEntity: Ordonnance::class)]
+
     private Collection $ordonnances;
 
     #[ORM\OneToMany(mappedBy: 'patient', targetEntity: Ordonnance::class)]
+
     private Collection $ordPatients;
 
     #[ORM\OneToMany(mappedBy: 'doctor', targetEntity: Fiche::class)]
@@ -338,9 +346,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
 
- //partie reservation ghayth , stay away 
+ //partie reservation ghayth , stay away
 
-    
+
     /**
      * @return Collection<int, Reservation>
      */
@@ -375,7 +383,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __tostring() :string{
 
         return $this->nom;
-        
+
             }
 
     public function getPrix(): ?float
@@ -389,8 +397,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-    
-    
+
+
 
 
     /**

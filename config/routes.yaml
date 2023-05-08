@@ -14,3 +14,7 @@ patient_controllers:
 search_users:
   path: /search-users
   controller: App\Controller\Doctor\OrdonnanceController::searchOrdonnance
+mobile_controllers:
+  resource: ../src/Controller/controllerMobile
+  type: annotation
+  prefix: /api
